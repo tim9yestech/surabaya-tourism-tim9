@@ -28,3 +28,7 @@ Route::get('/umkm', function(){
 Route::get('/produk-umkm', function(){
     return view ('produk-umkm');
 });
+
+Route::get('/login', function(){
+    return view ('login');
+});
