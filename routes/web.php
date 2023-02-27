@@ -17,18 +17,14 @@ Route::get('/', function () {
     return view('beranda');
 });
 
-Route::get('/about',function(){
-    return view('about',[
-        "name" => "Rengga Adistyan Orlando",
-        "email" => "radistyano@gmail.com",
-        "image" => "assets/img/itc-surabaya.jpg"
-    ]);
-});
-
 Route::get('/destinasi', function(){
     return view('destinasi');
 });
 
 Route::get('/umkm', function(){
     return view ('umkm');
+});
+
+Route::get('/produk-umkm', function(){
+    return view ('produk-umkm');
 });
