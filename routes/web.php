@@ -20,19 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/destinasi', function(){
-    return view('destinasi', [
-        "title" =>  "Destinasi Wisata - Wisata Surabaya"
-    ]);
-});
-
-Route::get('/umkm', function(){
-    return view ('umkm', [
-        "title" => "Produk UMKM Surabaya"
-    ]);
-});
-
-<<<<<<< Updated upstream
-Route::get('/destinasi', function(){
     return view('destinasi');
 });
 
@@ -47,12 +34,4 @@ Route::get('/produk-umkm', function(){
 Route::get('/login', function(){
     return view ('login');
 });
-=======
-Route::get('/about',function(){
-    return view('about',[
-        "name" => "Rengga Adistyan Orlando",
-        "email" => "radistyano@gmail.com",
-        "image" => "assets/img/itc-surabaya.jpg"
-    ]);
-});
->>>>>>> Stashed changes
+
