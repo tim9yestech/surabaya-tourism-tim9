@@ -1,10 +1,54 @@
 body,
 html {
     height: 100%;
+    font-family: "Titillium", sans-serif;
 }
 
 #bg-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.label-input {
+    position: absolute;
+    color: #999999;
+    font-size: 13px;
+    padding-left: 65px;
+}
+
+.input {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #686868;
+    display: block;
+    width: 100%;
+    background: #edf1f4;
+    height: 72px;
+    border-radius: 3px;
+    padding-top: 20px;
+    padding-right: 65px;
+    padding-bottom: 10px;
+    padding-left: 65px;
+}
+
+.symbol-input {
+    font-size: 24px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 23px;
+    padding-bottom: 5px;
+    pointer-events: none;
+    transition: all 0.4s;
 }
