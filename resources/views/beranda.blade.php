@@ -21,11 +21,9 @@
             <nav class="navbar p-4">
                 <div class="logo"><img src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png" style="width: 100px" alt=""></div>
                 <ul class="navigation">
-                    <li class="item"><a href="#">BERANDA</a></li>
-                    <li class="item"><a href="destinasi.blade.php">DESTINASI</a></li>
-                    <li class="item"><a href="#">EVENT</a></li>
-                    <li class="item"><a href="#">AKOMODASI</a></li>
-                    <li class="item"><a href="#">INFORMASI</a></li>
+                    <li class="item"><a href="/">BERANDA</a></li>
+                    <li class="item"><a href="/destinasi">DESTINASI</a></li>
+                    <li class="item"><a href="/umkm">UMKM</a></li>
                 </ul>
             </nav>
         </header>
@@ -396,6 +394,5 @@
                 </div>
             </div>
         </footer>
-
 </body>
 </html>
