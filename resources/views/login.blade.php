@@ -14,53 +14,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     {{-- Icon --}}
-    <link href="https://tourism.surabaya.go.id/assets/front/css/font-awesome-6.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body style="background-image: url(assets/img/jembatan-suramadu.jpg)" id="bg-image">
     <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39)" class="container-fluid">
-        <form action="/login" method="POST">
-            @csrf
-            <div class="container d-flex flex-column" style="border: 2px solid #000">
-                <div class="card" style="background-color: white; border-radius: 30px;">
-                    <div class="col-md-5">
-                        <div class="m-sm-4">
-                            <h4 class="fw-bold mb-3 text-center" style="font-size: 21px;">Login Administrator</h4>
-                            <div style="border-top: 3px solid #6868ac;" class="py-1"></div>
-                            <p style="line-height: 1.5; font-size: 14px;" class="py-2">
-                                Surabaya Tourism <br /> Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata Pemerintah Kota Surabaya
-                            </p>
-                            <div style="border: 1px solid #6868ac;" class="my-2">
-                                <div>
-                                    <span class="my-2 label-input">Email</span>
-                                    <input type="text" name="email" id="email" class="input shadow">
+        <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none;">
+                    <div class="container">
+                        <h4 class="fw-semibold mb-3 text-center" style="font-size: 21px; margin-top: 20px;">Login Administrator</h4>
+                        <div class="py-1" style="border-top: 3px solid #6868ac;"></div>
+                        <p class="py-2" style="line-height: 1.5; font-size: 14px;">
+                            Surabaya Tourism<br>Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata Pemerintah Kota Surabaya
+                        </p>
+                        <form action="#" method="POST">
+                            <div class="my-2" style="border: 1px solid #6868ac; border-radius: 3px;">
+                                <div class="wrap-input">
+                                    <label for="email" class="label-input my-2">Email</label>
+                                    <input type="email" id="email" placeholder="name@example.com" class="input shadow">
+                                    <span class="focus-input"></span>
                                     <span class="symbol-input">
-                                        <span class="fa fa-fw fa-envelope"></span>
+                                        <i data-feather="mail"></i>
                                     </span>
                                 </div>
-                                <div>
-                                    <span class="my-2 label-input">Kata Sandi</span>
-                                    <input type="password" name="password" id="password" class="input shadow" style="background: white;">
+                                <div class="wrap-input">
+                                    <label for="role" class="label-input my-2">Role</label>
+                                    <select id="role" class="input shadow" style="border: none; background-color: #fff;">
+                                        <option>-- Pilih Role --</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="kontributor">Kontributor</option>
+                                    </select>
+                                    <span class="focus-input"></span>
                                     <span class="symbol-input">
-                                        <span class="fa fa-fw fa-lock"></span>
+                                        <i data-feather="user-check"></i>
                                     </span>
                                 </div>
-                                <div>
-                                    <span class="my-2 label-input">Role</span>
-                                    <input type="dropdown" name="role" id="role" value="A" class="input shadow">Admin
-                                    <input type="dropdown" name="role" id="role" value="K" class="input shadow">Kontributor
+                                <div class="wrap-input">
+                                    <label for="password" class="label-input my-2">Password</label>
+                                    <input type="password" id="password" placeholder="********" class="input shadow">
+                                    <span class="focus-input"></span>
                                     <span class="symbol-input">
-                                        <span class="fa fa-fw fa-envelope"></span>
+                                        <i data-feather="lock"></i>
                                     </span>
                                 </div>
                             </div>
-                            <p class="small">Lupa akun / belum punya akun? Hubungi <a href="#">tim Programmer.</a></p>
-                        </div>
-                    </div>    
+                        </form>
+                        <h6>Coba lihat</h6>
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    {{-- Feather Icons --}}
+    <script> feather.replace() </script>
 </body>
 </html>
