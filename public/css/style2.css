@@ -4,6 +4,12 @@ html {
     font-family: "Titillium Web", sans-serif;
 }
 
+h4 {
+    font-size: 21px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
 #bg-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,7 +34,7 @@ input {
     color: #686868;
     display: block;
     width: 100%;
-    background: #edf1f4;
+    background: rgba(237, 241, 244, 0.541);
     height: 72px;
     border-radius: 3px;
     padding-top: 20px;
@@ -74,4 +80,19 @@ input {
     position: relative;
     width: 100%;
     z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #0b0bbe;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+.btn-style {
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #999;
 }

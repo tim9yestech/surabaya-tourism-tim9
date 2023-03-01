@@ -20,15 +20,15 @@
     <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39)" class="container-fluid">
         <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin">
             <div class="modal-dialog" role="document">
-                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none;">
+                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none; background-color: #ffffff54;">
                     <div class="container">
-                        <h4 class="fw-semibold mb-3 text-center" style="font-size: 21px; margin-top: 20px;">Login Administrator</h4>
+                        <h4 class="fw-semibold mb-3 text-center">Login Administrator</h4>
                         <div class="py-1" style="border-top: 3px solid #6868ac;"></div>
                         <p class="py-2" style="line-height: 1.5; font-size: 14px;">
                             Surabaya Tourism<br>Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata Pemerintah Kota Surabaya
                         </p>
                         <form action="#" method="POST">
-                            <div class="my-2" style="border: 1px solid #6868ac; border-radius: 3px;">
+                            <div class="my-2" style="border: 2px solid #6868ac; border-radius: 3px;">
                                 <div class="wrap-input">
                                     <label for="email" class="label-input my-2">Email</label>
                                     <input type="email" id="email" placeholder="name@example.com" class="input shadow">
@@ -38,8 +38,16 @@
                                     </span>
                                 </div>
                                 <div class="wrap-input">
+                                    <label for="password" class="label-input my-2">Password</label>
+                                    <input type="password" id="password" placeholder="********" class="input shadow" style="background-color: rgba(255, 255, 255, 0.651);">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i data-feather="lock"></i>
+                                    </span>
+                                </div>
+                                <div class="wrap-input">
                                     <label for="role" class="label-input my-2">Role</label>
-                                    <select id="role" class="input shadow" style="border: none; background-color: #fff;">
+                                    <select id="role" class="input shadow" style="border: none;">
                                         <option>-- Pilih Role --</option>
                                         <option value="admin">Admin</option>
                                         <option value="kontributor">Kontributor</option>
@@ -49,17 +57,25 @@
                                         <i data-feather="user-check"></i>
                                     </span>
                                 </div>
-                                <div class="wrap-input">
-                                    <label for="password" class="label-input my-2">Password</label>
-                                    <input type="password" id="password" placeholder="********" class="input shadow">
-                                    <span class="focus-input"></span>
-                                    <span class="symbol-input">
-                                        <i data-feather="lock"></i>
-                                    </span>
+                            </div>
+                            <p style="font-weight: 400; font-size: 75%;">
+                                Lupa akun / minat jadi Kontributor? Hubungi <a class="fw-bold" href="https://wa.wizard.id/caf000" target="_blank">tim Programmer</a>. 
+                            </p>
+                            <div class="row text-center">
+                                <div class="col-6 my-1">
+                                    <button type="submit" class="btn btn-rounded w-100 text-white" style="background: #6868ac; border: 1px solid #6868ac;">
+                                        <i data-feather="log-in" class="mr-1"></i>
+                                        Login
+                                    </button>
+                                </div>
+                                <div class="col-6 my-1">
+                                    <a href="/" class="btn btn-rounded w-100 btn-style">
+                                    <i data-feather="chevron-left" class="mr-1"></i>
+                                    Halaman Beranda
+                                    </a>
                                 </div>
                             </div>
                         </form>
-                        <h6>Coba lihat</h6>
                     </div>
                 </div>
             </div>
