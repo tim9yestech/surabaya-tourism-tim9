@@ -91,8 +91,15 @@ a:hover {
     color: aliceblue;
 }
 
-.btn-style {
+.btn-purple {
+    background: #6868ac;
+    border: 1px solid #6868ac;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.btn-white {
     background-color: #fff;
+    border: 1px solid #fff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     color: #999;
 }

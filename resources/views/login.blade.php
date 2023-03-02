@@ -12,9 +12,9 @@
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     {{-- Icon --}}
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body style="background-image: url(assets/img/jembatan-suramadu.jpg)" id="bg-image">
     <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39)" class="container-fluid">
@@ -38,7 +38,7 @@
                                         <input type="email" id="email" placeholder="name@example.com" class="input shadow">
                                         <span class="focus-input"></span>
                                         <span class="symbol-input">
-                                            <i data-feather="mail"></i>
+                                            <i class='bx bxs-envelope'></i>
                                         </span>
                                     </div>
                                     <div class="wrap-input">
@@ -46,7 +46,7 @@
                                         <input type="password" id="password" placeholder="********" class="input shadow" style="background-color: rgba(255, 255, 255, 0.651);">
                                         <span class="focus-input"></span>
                                         <span class="symbol-input">
-                                            <i data-feather="lock"></i>
+                                            <i class='bx bxs-lock-alt'></i>
                                         </span>
                                     </div>
                                     <div class="wrap-input">
@@ -58,7 +58,7 @@
                                         </select>
                                         <span class="focus-input"></span>
                                         <span class="symbol-input">
-                                            <i data-feather="user-check"></i>
+                                            <i class='bx bxs-user-check'></i>
                                         </span>
                                     </div>
                                 </div>
@@ -67,15 +67,15 @@
                                 </p>
                                 <div class="row text-center">
                                     <div class="col-6 my-1">
-                                        <button type="submit" class="btn btn-rounded w-100 text-white" style="background: #6868ac; border: 1px solid #6868ac;">
-                                            <i data-feather="log-in" class="mr-1"></i>
-                                            Login
+                                        <button type="submit" class="btn btn-rounded btn-purple w-100 text-white d-flex justify-content-center align-items-center">
+                                            <i class='bx bx-log-in'></i>
+                                            <span style="padding-left: 6px;">Login</span>
                                         </button>
                                     </div>
                                     <div class="col-6 my-1">
-                                        <a href="/" class="btn btn-rounded w-100 btn-style">
-                                        <i data-feather="chevron-left" class="mr-1"></i>
-                                        Beranda
+                                        <a href="/" class="btn btn-rounded w-100 btn-white d-flex justify-content-center align-items-center">
+                                            <i class='bx bx-chevron-left'></i>
+                                            Beranda
                                         </a>
                                     </div>
                                 </div>
@@ -88,7 +88,5 @@
     </div>
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    {{-- Feather Icons --}}
-    <script> feather.replace() </script>
 </body>
 </html>

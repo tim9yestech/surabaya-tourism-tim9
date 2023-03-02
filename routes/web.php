@@ -35,3 +35,7 @@ Route::get('/login', function(){
     return view ('login');
 });
 
+Route::get('/admin-panel', function(){
+    return view ('adminpanel');
+});
+

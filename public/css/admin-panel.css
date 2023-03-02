@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    /* Fonts */
+    --titillium: "Titillium", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
+    /* Colors */
+    --white: #fff;
+    --purple: #6868ac;
+    --black: #000;
+    --light: #f9f9f9;
+    --blue: #3c91e6;
+    --light-blue: #cfe8ff;
+    --grey: #eee;
+    --dark-grey: #aaaaaa;
+    --dark: #342e37;
+    --red: #db504a;
+    --yellow: #ffce26;
+    --light-yellow: #fff2c6;
+    --orange: #fd7238;
+    --light-orange: #ffe0d3;
+}
+
+body.dark {
+    --light: #0c0c1e;
+    --grey: #060714;
+    --dark: #fbfbfb;
+}
+
+body {
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: var(--purple);
+    z-index: 2000;
+    font-family: var(--titillium);
+    transition: 0.3s ease;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+#sidebar::--webkit-scrollbar {
+    display: none;
+}
+
+#sidebar.hide {
+    width: 60px;
+}
+
+#sidebar .brand {
+    font-size: 24px;
+    font-weight: 700;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    padding-bottom: 20px;
+    box-sizing: content-box;
+}
+
+.brand span {
+    text-transform: uppercase;
+}
+
+#sidebar .brand .bx {
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+}
