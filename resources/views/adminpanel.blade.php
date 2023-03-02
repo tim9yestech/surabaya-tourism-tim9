@@ -19,13 +19,92 @@
 <body>
     {{-- Sidebar --}}
     <section id="sidebar">
-        <a href="#" class="brand">
-            <i class='bx bx-user'></i>
-            <span class="text">Admin</span>
-        </a>
+        <div class="position">
+            <a href="#" >
+                <div class="bar-user role">
+                    <i class='bx bx-user'></i>
+                    <span>Admin</span>
+                </div>
+            </a>
+            <div class="bar-user admin-name">
+                <span>Nurul Maghfiroh</span>
+            </div>
+        </div>
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="#">
+                    <i class='bx bxs-dashboard'></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-badge'></i>
+                    <span>Data Admin</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-data'></i>
+                    <span>Data Destinasi Wisata</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-data'></i>
+                    <span>Data Produk UMKM</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-comment-dots'></i>
+                    <span>Data Ulasan</span>
+                </a>
+            </li>
+        </ul>
+        <div class="dividing-line"></div>
+        <ul class="side-menu top" style="margin-top: 29px;">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-circle'></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span>Pengaturan</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
     </section>
-    {{-- Feather Icons --}}
-    <script> feather.replace() </script>
+
+    {{-- Content --}}
+	<section id="content">
+		{{-- Navbar --}}
+		<nav>
+			<i class='bx bx-menu'></i>
+            <span>Selamat Datang di Administrator Panel!</span>
+        </nav>
+
+        {{-- Main --}}
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    {{-- Javascript --}}
+    <script src="{!! asset('js/adminpanel.js') !!}"></script>
 </body>
 </html>
 
