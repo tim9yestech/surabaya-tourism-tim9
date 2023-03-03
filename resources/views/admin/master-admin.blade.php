@@ -31,32 +31,32 @@
             </div>
         </div>
         <ul class="side-menu top">
-            <li class="active">
-                <a href="#">
+            <li class="{{ ($headtitle === "Dashboard") ? 'active' : '' }}">
+                <a href="/admin">
                     <i class='bx bxs-dashboard'></i>
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ ($headtitle === "Data Admin") ? 'active' : '' }}">
+                <a href="/admin/data-admin">
                     <i class='bx bxs-user-badge'></i>
                     <span>Data Admin</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ ($headtitle === "Data Destinasi Wisata") ? 'active' : '' }}">
+                <a href="/admin/data-destinasi">
                     <i class='bx bxs-data'></i>
                     <span>Data Destinasi Wisata</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ ($headtitle === "Data Produk UMKM") ? 'active' : '' }}">
+                <a href="/admin/data-produk-umkm">
                     <i class='bx bxs-data'></i>
                     <span>Data Produk UMKM</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ ($headtitle === "Data Ulasan") ? 'active' : '' }}">
+                <a href="/admin/data-ulasan">
                     <i class='bx bxs-comment-dots'></i>
                     <span>Data Ulasan</span>
                 </a>
@@ -64,20 +64,20 @@
         </ul>
         <div class="dividing-line"></div>
         <ul class="side-menu top" style="margin-top: 29px;">
-            <li>
-                <a href="#">
+            <li class="{{ ($headtitle === "Profil Admin") ? 'active' : '' }}">
+                <a href="/admin/profil">
                     <i class='bx bxs-user-circle'></i>
                     <span>Profil</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ ($headtitle === "Pengaturan") ? 'active' : '' }}">
+                <a href="/admin/pengaturan">
                     <i class='bx bxs-cog'></i>
                     <span>Pengaturan</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="logout">
+                <a href="/login" class="logout">
                     <i class='bx bxs-log-out-circle'></i>
                     <span>Logout</span>
                 </a>
@@ -97,9 +97,10 @@
         <main>
             <div class="head-title">
                 <div class="left">
-                    <h1>Dashboard</h1>
+                    <h1>{{ $headtitle }}</h1>
                 </div>
             </div>
+            @yield('isi_konten')
         </main>
     </section>
 
