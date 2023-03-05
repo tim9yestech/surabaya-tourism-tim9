@@ -35,7 +35,10 @@
                                 <div class="my-2" style="border: 2px solid #6868ac; border-radius: 3px;">
                                     <div class="wrap-input">
                                         <label for="email" class="label-input my-2">Email</label>
-                                        <input type="email" id="email" placeholder="name@example.com" class="input shadow">
+                                        <input type="email" id="email" name="email" placeholder="name@example.com" class="input shadow {{ $errors -> has('email') ? 'is-invalid' : '' }}">
+                                        @error('email')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                         <span class="focus-input"></span>
                                         <span class="symbol-input">
                                             <i class='bx bxs-envelope'></i>
@@ -43,7 +46,10 @@
                                     </div>
                                     <div class="wrap-input">
                                         <label for="password" class="label-input my-2">Password</label>
-                                        <input type="password" id="password" placeholder="********" class="input shadow" style="background-color: rgba(255, 255, 255, 0.651);">
+                                        <input type="password" id="password" name="password" placeholder="********" class="input shadow {{ $errors -> has('password') ? 'is-invalid' : '' }}" style="background-color: rgba(255, 255, 255, 0.651);">
+                                        @error('password')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                         <span class="focus-input"></span>
                                         <span class="symbol-input">
                                             <i class='bx bxs-lock-alt'></i>
