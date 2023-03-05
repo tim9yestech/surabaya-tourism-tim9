@@ -77,3 +77,23 @@ Route::get('/admin/pengaturan', function(){
     ]);
 });
 
+Route::group([
+        'prefix'=>config('admin.prefix'),
+        'namespace'=>'App\\Http\\Controllers',
+    ],function () {
+
+        Route::get('login','LoginAdminController@formLogin')->name('admin.login');
+        Route::post('login','LoginAdminController@login');
+
+        Route::middleware(['auth:admin'])->group(function () {
+            Route::post('logout','LoginAdminController@logout')->name('admin.logout');
+            Route::view('/admin','admin.dashboard')->name('admin.dashboard');
+            Route::view('/admin/data-destinasi','admin.data-destinasi')->name('data-destinasi')->middleware('can:role,"admin","contributor"');
+            Route::view('/admin/data-produk-umkm','admin.data-produk-umkm')->name('data-produk-umkm')->middleware('can:role,"admin","contributor"');
+            Route::view('/admin/data-ulasan','admin.data-ulasan')->name('data-ulasan')->middleware('can:role,"admin","contributor"');
+            Route::view('/admin/profil','admin.profil')->name('data-profil')->middleware('can:role,"admin","contributor"');
+            Route::view('/admin/pengaturan','admin.pengaturan')->name('data-pengaturan')->middleware('can:role,"admin","contributor"');
+            Route::view('/admin/data-admin','admin.data-admin')->name('admin')->middleware('can:role,"admin"');
+        });
+});
+
