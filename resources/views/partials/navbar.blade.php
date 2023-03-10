@@ -15,6 +15,15 @@
                         <li class="item {{ ($title === "Produk UMKM Surabaya") ? 'active' : '' }}">
                             <a href="/umkm">UMKM</a>
                         </li>
+
+                        {{-- test about&post --}}
+                        <li class="item {{ ($title === "About") ? 'active' : '' }}">
+                            <a href="/about">About</a>
+                        </li>
+                        <li class="item {{ ($title === "Posts") ? 'active' : '' }}">
+                            <a href="/posts">Blog</a>
+                        </li>
+                        {{-- test about&post --}}
                     </ul>
                 </div>
             </div>
