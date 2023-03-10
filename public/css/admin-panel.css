@@ -272,3 +272,9 @@ li {
     color: var(--dark);
     text-transform: uppercase;
 }
+.scroll {
+    height: 400px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
