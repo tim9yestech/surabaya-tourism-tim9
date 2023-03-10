@@ -20,11 +20,15 @@ Route::get('/', function () {
 });
 
 Route::get('/destinasi', function(){
-    return view('destinasi');
+    return view('destinasi', [
+        "headtitle" => "Destinasi Wisata - Wisata Surabaya"
+    ]);
 });
 
 Route::get('/umkm', function(){
-    return view ('umkm');
+    return view ('umkm',[
+        "headtitle" => "Produk UMKM - UMKM Surabaya"
+    ]);
 });
 
 Route::get('/produk-umkm', function(){
