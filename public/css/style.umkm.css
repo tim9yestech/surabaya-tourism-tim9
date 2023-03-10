@@ -238,12 +238,16 @@ li.breadcrumb-item>a{
 /* Highligh image start */
 .item img{
     height: 340px;
+
 }
 /* Highlight image end */
 
 /* content image start */
 .btn-next{
-    margin-left: 93vh;
+    margin-left: 91vh;
+}
+i.fa-sharp{
+    color: white;
 }
 .badge{
     border-radius: 3px !important;
@@ -262,7 +266,7 @@ li.breadcrumb-item>a{
     background-color: #6868ac;
 }
 .row .col .card-content img{
-    height: 200px;
+    height: 280px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;

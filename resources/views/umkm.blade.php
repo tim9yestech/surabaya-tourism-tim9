@@ -131,22 +131,23 @@
         <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/1.jpg" class="card-img-top" alt="gambar1">
+                    <img src="assets/img/umkm/makanan/dede-satoe.jpg" class="card-img-top" alt="Dede Satoe">
+                    <h3></h3>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/2.jpg" class="card-img-top" alt="gambar2">
+                    <img src="assets/img/umkm/makanan/Kreasi-Fitri.jpg" class="card-img-top" alt="Kreasi-Fitri.jpg">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/3.jpg" class="card-img-top" alt="gambar3">
+                    <img src="assets/img/umkm/makanan/misscrip.jpg" class="card-img-top" alt="Misscrip">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/4.jpg" class="card-img-top" alt="gambar4">
+                    <img src="assets/img/umkm/makanan/lapis-kukus-pahlawan.jpg" class="card-img-top" alt="Lapis Kukus Pahlawan">
                 </div>
             </div>
         </div>
@@ -154,22 +155,22 @@
         <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/1.jpg" class="card-img-top" alt="gambar1">
+                    <img src="assets/img/umkm/kerajinan-tangan/101-true-fashion-art.jpg" class="card-img-top" alt="Fashion Art">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/2.jpg" class="card-img-top" alt="gambar2">
+                    <img src="assets/img/umkm/kerajinan-tangan/light-craft.jpg" class="card-img-top" alt="Light Craft">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/3.jpg" class="card-img-top" alt="gambar3">
+                    <img src="assets/img/umkm/kerajinan-tangan/Kesra-Bordir.jpg" class="card-img-top" alt="Kesra Bordir">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/4.jpg" class="card-img-top" alt="gambar4">
+                    <img src="assets/img/umkm/kerajinan-tangan/Kulit-Kreasindo.jpg" class="card-img-top" alt="Kulit Kreasindo">
                 </div>
             </div>
         </div>
@@ -177,50 +178,27 @@
         <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/1.jpg" class="card-img-top" alt="gambar1">
+                    <img src="assets/img/umkm/pakaian/Era-Krisna.jpg" class="card-img-top" alt="Era Krisna">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/2.jpg" class="card-img-top" alt="gambar2">
+                    <img src="assets/img/umkm/pakaian/john-angelo.jpg" class="card-img-top" alt="John Angelo">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/3.jpg" class="card-img-top" alt="gambar3">
+                    <img src="assets/img/umkm/pakaian/titi-collection.jpg" class="card-img-top" alt="Titi Collection">
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/4.jpg" class="card-img-top" alt="gambar4">
-                </div>
-            </div>
-        </div>
-        <span class="content-title fw-bold">Kebutuhan Pokok</span>
-        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
-            <div class="col">
-                <div class="card-content">
-                    <img src="assets/img/1.jpg" class="card-img-top" alt="gambar1">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card-content">
-                    <img src="assets/img/2.jpg" class="card-img-top" alt="gambar2">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card-content">
-                    <img src="assets/img/3.jpg" class="card-img-top" alt="gambar3">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card-content">
-                    <img src="assets/img/4.jpg" class="card-img-top" alt="gambar4">
+                    <img src="assets/img/umkm/pakaian/Vienk-Gallery.jpg" class="card-img-top" alt="Vienk-Gallery">
                 </div>
             </div>
         </div>
     </div>
-    <div class="btn-next">
-        <span class="badge badge-primary">Selengkapnya</span>
+    <div class="btn-next mb-5">
+        <span class="badge badge-primary">Selengkapnya<i class="fa-sharp fa-solid fa-arrow-right px-1"></i></span>
     </div>
 @endsection

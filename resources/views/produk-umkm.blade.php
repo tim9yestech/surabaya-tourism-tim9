@@ -28,7 +28,6 @@
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/destinasi">Destinasi</a></li>
                     <li><a class="active" href="/umkm">Umkm</a></li>
-                    <li><a href="#">Informasi</a></li>
                 </ul>
             </div>
         </div>

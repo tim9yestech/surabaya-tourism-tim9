@@ -62,9 +62,6 @@
     <section class="content">
         @yield('content')
     </section>
-    <section class="btn_nextpage">
-        @yield('btn_nextpage')
-    </section>
     @include('partials.footer')
 
     
