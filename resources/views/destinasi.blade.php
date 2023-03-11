@@ -25,8 +25,10 @@
         </div>
     </div>
 @endsection
-@section('container')
-    <div class="row">
+@section('content-wrapper')
+<section class="py-7">
+    <div class="container">
+            <div class="row">
                     <div class="col-md-4 text-center my-2">
                 <a href="https://tourism.surabaya.go.id/travel/detail/museum-pendidikan-surabaya">
                 <div class="img-rounded-hover-effect">
@@ -36,27 +38,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Museum Pendidikan Surabaya
@@ -76,27 +78,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Museum
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Museum Olahraga Surabaya
@@ -116,27 +118,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Religi
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Religi
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Religi
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Religi
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Religi
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Masjid Nasional Al Akbar
@@ -156,27 +158,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Kampung Wisata
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Kampung Wisata
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Kampung Wisata
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Kampung Wisata
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Kampung Wisata
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Kampung Lawas Maspati
@@ -196,27 +198,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             City Park
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             City Park
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             City Park
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             City Park
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             City Park
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Taman Mozaik
@@ -237,31 +239,31 @@
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-677px, 0px, 0px); transition: all 0.25s ease 0s; width: 1356px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0.25s ease 0s; width: 2196px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Outdoor and Nature
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Family Activities
                         </span>
-                    </div></div><div class="owl-item" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Outdoor and Nature
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Family Activities
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Outdoor and Nature
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Family Activities
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Kebun Binatang Surabaya
@@ -282,31 +284,31 @@
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-677px, 0px, 0px); transition: all 0.25s ease 0s; width: 1356px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0.25s ease 0s; width: 2196px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Monumen &amp; Landmark
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             History &amp; Heritage
                         </span>
-                    </div></div><div class="owl-item" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Monumen &amp; Landmark
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             History &amp; Heritage
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Monumen &amp; Landmark
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             History &amp; Heritage
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Monumen Tugu Pahlawan
@@ -326,27 +328,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pusat Perbelanjaan
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pusat Perbelanjaan
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pusat Perbelanjaan
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pusat Perbelanjaan
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pusat Perbelanjaan
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Tunjungan Plaza
@@ -366,27 +368,27 @@
                 <div class="mt-2">
                 <div class="owl-carousel slider-category owl-loaded owl-drag">
                                     
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-451px, 0px, 0px); transition: all 0s ease 0s; width: 1130px;"><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-731px, 0px, 0px); transition: all 0s ease 0s; width: 1830px;"><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pasar Tradisional
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pasar Tradisional
                         </span>
-                    </div></div><div class="owl-item active" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item active" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pasar Tradisional
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pasar Tradisional
                         </span>
-                    </div></div><div class="owl-item cloned" style="width: 225.988px;"><div class="item">
+                    </div></div><div class="owl-item cloned" style="width: 365.987px;"><div class="item">
                         <span class="badge badge-primary">
                             Pasar Tradisional
                         </span>
-                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                    </div></div></div></div><div class="owl-dots disabled"></div></div>
                 <hr class="my-2 bg-primary">
                 <h5 class="font-weight-bold">
                     Pasar Genteng
@@ -398,4 +400,8 @@
                 </div>
             </div>
                 </div>
+        <div class="mt-4 text-center">
+        </div>
+        </div>
+    </section>
 @endsection

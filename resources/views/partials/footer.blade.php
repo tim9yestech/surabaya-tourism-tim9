@@ -114,23 +114,6 @@
                             <div class="py-4 text-white text-right" style="font-size: 20px;">
                                 WISATA SURABAYA
                             </div>
-                            <div id="histats_counter">
-                                <script type="text/javascript">var _Hasync= _Hasync|| [];
-                                    _Hasync.push(['Histats.start', '1,4660129,4,408,270,55,00011110']);
-                                    _Hasync.push(['Histats.fasi', '1']);
-                                    _Hasync.push(['Histats.track_hits', '']);
-                                    (function() {
-                                    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-                                    hs.src = ('//s10.histats.com/js15_as.js');
-                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-                                    })();
-                                </script>
-                                <noscript>
-                                    <a href="/" target="_blank">
-                                        <img  src="//sstatic1.histats.com/0.gif?4660129&101" alt="" border="0">
-                                    </a>
-                                </noscript>
-                            <div id="histats_counter_7334" style="display: block;"><a href="http://www.histats.com/viewstats/?sid=4660129&amp;ccid=408" target="_blank"><canvas id="histats_counter_7334_canvas" width="270" height="43" style="cursor: pointer;"></canvas></a></div></div>
                         </div>
                     </div>
                 </div>
