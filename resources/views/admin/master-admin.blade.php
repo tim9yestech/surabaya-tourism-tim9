@@ -18,16 +18,16 @@
 </head>
 <body>
     {{-- Sidebar --}}
-    <section id="sidebar">
-        <div class="position">
+    <section id="side-bar">
+        <div class="left-position">
             <a href="#" >
                 <div class="bar-user role">
                     <i class='bx bx-user'></i>
-                    <span>Admin</span>
+                    <span>{{ Auth::user()->role }}</span>
                 </div>
             </a>
             <div class="bar-user admin-name">
-                <span>Nurul Maghfiroh</span>
+                <span>{{ Auth::user()->name }}</span>
             </div>
         </div>
         <ul class="side-menu top">
@@ -37,12 +37,14 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+            @can('role','admin')
             <li class="{{ ($headtitle === "Data Admin") ? 'active' : '' }}">
                 <a href="/admin/data-admin">
                     <i class='bx bxs-user-badge'></i>
                     <span>Data Admin</span>
                 </a>
             </li>
+            @endcan
             <li class="{{ ($headtitle === "Data Destinasi Wisata") ? 'active' : '' }}">
                 <a href="/admin/data-destinasi">
                     <i class='bx bxs-data'></i>
@@ -55,12 +57,14 @@
                     <span>Data Produk UMKM</span>
                 </a>
             </li>
+            @can('role','admin')
             <li class="{{ ($headtitle === "Data Ulasan") ? 'active' : '' }}">
                 <a href="/admin/data-ulasan">
                     <i class='bx bxs-comment-dots'></i>
                     <span>Data Ulasan</span>
                 </a>
             </li>
+            @endcan
         </ul>
         <div class="dividing-line"></div>
         <ul class="side-menu top" style="margin-top: 29px;">
@@ -77,10 +81,13 @@
                 </a>
             </li>
             <li>
-                <a href="/login" class="logout">
+                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
                     <i class='bx bxs-log-out-circle'></i>
                     <span>Logout</span>
                 </a>
+                <form action="{{ route('admin.logout') }}" id="logout-form" method="post">
+                    @csrf
+                </form>
             </li>
         </ul>
     </section>
@@ -88,7 +95,7 @@
     {{-- Content --}}
 	<section id="content">
 		{{-- Navbar --}}
-		<nav>
+		<nav class="nav">
 			<i class='bx bx-menu'></i>
             <span>Selamat Datang di Administrator Panel!</span>
         </nav>

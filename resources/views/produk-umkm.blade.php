@@ -18,17 +18,22 @@
 </head>
 <body>
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg" style="box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10); background: #fff;">
+    <nav class="navbar navbar-expand-lg py-0">
         <div class="container clearfix">
             <a href="/">
                 <img src="{{ asset('assets/img/Sparkling-Surabaya.png') }}" alt="Wisata Surabaya" style="width : 100px;">
             </a>
-            <div class="ms-auto" style="width: 44%; padding-right: 50px;">
-                <ul class="d-flex fw-semibold justify-content-end" style="grid-gap: 20px; max-height: 400px; list-style: none; margin-bottom: 0; padding: 29px 0;">
+            <div class="ms-auto tb-size">
+                <ul class="d-flex fw-semibold justify-content-end align-items-center nav-menu">
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/destinasi">Destinasi</a></li>
-                    <li><a class="active" href="/umkm">Umkm</a></li>
-                    <li><a href="#">Informasi</a></li>
+                    <li class="active"><a href="/umkm">Umkm</a></li>
+                    <li data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#">Informasi</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button"><a href="#">E-Book Wisata</a></button></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -44,8 +49,11 @@
                                     <li class="breadcrumb-item">
                                         <a href="/">Beranda</a>
                                     </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="/produk-umkm">Produk UMKM</a>
+                                    </li>
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        UMKM
+                                        John Anglo
                                     </li>
                                 </ol>
                             </div>
@@ -58,7 +66,7 @@
             </div>
         </div>
     </section>
-    <section class="py-7">
+    <section class="py">
         <div class="container">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 65px;">
                 <div class="carousel-inner"style="border-radius: 15px; max-height: 500px;">
@@ -212,6 +220,8 @@
             </div>
         </div>
     </section>
+
+    @include('footer')
 
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

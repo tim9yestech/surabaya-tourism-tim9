@@ -22,16 +22,17 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none; background-color: #ffffff54;">
                     <div class="row">
-                        <div class="container col-7">
-                            <img src="{!! asset('assets/img/img-login.jpg') !!}" alt="Wisata Surabaya" style="max-width: 100%; height: 100%; border-radius: 1rem;">
+                        <div class="container col-lg-7 col-md-12 text-center">
+                            <img class="img-fluid" src="{!! asset('assets/img/img-login.jpg') !!}" alt="Wisata Surabaya" style="max-width: 100%; height: 100%; border-radius: 1rem;">
                         </div>
-                        <div class="container col-5">
+                        <div class="container col-lg-5 col-md-12">
                             <h4 class="fw-semibold mb-3 text-center">Login Administrator</h4>
                             <div class="py-1" style="border-top: 3px solid #6868ac;"></div>
                             <p class="py-2" style="line-height: 1.5; font-size: 14px;">
                                 Surabaya Tourism<br>Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata Pemerintah Kota Surabaya
                             </p>
                             <form action="#" method="POST">
+                                @csrf
                                 <div class="my-2" style="border: 2px solid #6868ac; border-radius: 3px;">
                                     <div class="wrap-input">
                                         <label for="email" class="label-input my-2">Email</label>
@@ -57,11 +58,14 @@
                                     </div>
                                     <div class="wrap-input">
                                         <label for="role" class="label-input my-2">Role</label>
-                                        <select id="role" class="input shadow" style="border: none;">
+                                        <select id="role" class="input shadow {{ $errors->has('role') ? ' is-invalid':'' }}" style="border: none;">
                                             <option>-- Pilih Role --</option>
                                             <option value="admin">Admin</option>
                                             <option value="kontributor">Kontributor</option>
                                         </select>
+                                        @error('role')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                         <span class="focus-input"></span>
                                         <span class="symbol-input">
                                             <i class='bx bxs-user-check'></i>
