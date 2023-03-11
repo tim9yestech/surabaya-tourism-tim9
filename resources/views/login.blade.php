@@ -56,7 +56,7 @@
                                             <i class='bx bxs-lock-alt'></i>
                                         </span>
                                     </div>
-                                    <div class="wrap-input">
+                                    {{-- <div class="wrap-input">
                                         <label for="role" class="label-input my-2">Role</label>
                                         <select id="role" class="input shadow {{ $errors->has('role') ? ' is-invalid':'' }}" style="border: none;">
                                             <option>-- Pilih Role --</option>
@@ -70,7 +70,7 @@
                                         <span class="symbol-input">
                                             <i class='bx bxs-user-check'></i>
                                         </span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <p style="font-weight: 400; font-size: 75%;">
                                     Lupa akun / minat jadi Kontributor? Hubungi <a class="fw-bold" href="https://wa.wizard.id/caf000" target="_blank">tim Programmer</a>. 

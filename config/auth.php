@@ -45,6 +45,11 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
+
+        'wilayah' => [
+            'driver' => 'session',
+            'provider' => 'wilayahs',
+        ],
     ],
 
     /*
@@ -73,6 +78,11 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
+        ],
+
+        'wilayahs' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Wilayah::class,
         ],
 
         // 'users' => [

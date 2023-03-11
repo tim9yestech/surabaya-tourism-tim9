@@ -32,34 +32,40 @@
         </div>
         <ul class="side-menu top">
             <li class="{{ ($headtitle === "Dashboard") ? 'active' : '' }}">
-                <a href="/admin">
+                <a href="{{ route('admin.dashboard') }}">
                     <i class='bx bxs-dashboard'></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             @can('role','admin')
             <li class="{{ ($headtitle === "Data Admin") ? 'active' : '' }}">
-                <a href="/admin/data-admin">
+                <a href="{{ route('data-admin') }}">
                     <i class='bx bxs-user-badge'></i>
                     <span>Data Admin</span>
                 </a>
             </li>
             @endcan
+            <li class="{{ ($headtitle === "Data Wilayah") ? 'active' : '' }}">
+                <a href="{{ route('data-wilayah') }}">
+                    <i class='bx bxs-data'></i>
+                    <span>Data Wilayah</span>
+                </a>
+            </li>
             <li class="{{ ($headtitle === "Data Destinasi Wisata") ? 'active' : '' }}">
-                <a href="/admin/data-destinasi">
+                <a href="{{ route('data-destinasi') }}">
                     <i class='bx bxs-data'></i>
                     <span>Data Destinasi Wisata</span>
                 </a>
             </li>
             <li class="{{ ($headtitle === "Data Produk UMKM") ? 'active' : '' }}">
-                <a href="/admin/data-produk-umkm">
+                <a href="{{ route('data-produk-umkm') }}">
                     <i class='bx bxs-data'></i>
                     <span>Data Produk UMKM</span>
                 </a>
             </li>
             @can('role','admin')
             <li class="{{ ($headtitle === "Data Ulasan") ? 'active' : '' }}">
-                <a href="/admin/data-ulasan">
+                <a href="{{ route('data-ulasan') }}">
                     <i class='bx bxs-comment-dots'></i>
                     <span>Data Ulasan</span>
                 </a>
@@ -69,13 +75,13 @@
         <div class="dividing-line"></div>
         <ul class="side-menu top" style="margin-top: 29px;">
             <li class="{{ ($headtitle === "Profil Admin") ? 'active' : '' }}">
-                <a href="/admin/profil">
+                <a href="{{ route('data-profil') }}">
                     <i class='bx bxs-user-circle'></i>
                     <span>Profil</span>
                 </a>
             </li>
             <li class="{{ ($headtitle === "Pengaturan") ? 'active' : '' }}">
-                <a href="/admin/pengaturan">
+                <a href="{{ route('data-pengaturan') }}">
                     <i class='bx bxs-cog'></i>
                     <span>Pengaturan</span>
                 </a>

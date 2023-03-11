@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WilayahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,11 +90,17 @@ Route::group([
             Route::post('logout','LoginAdminController@logout')->name('admin.logout');
             Route::view('/','admin.dashboard',["headtitle" => "Dashboard"])->name('admin.dashboard');
             Route::view('/data-destinasi','admin.data-destinasi',["headtitle" => "Data Destinasi Wisata"])->name('data-destinasi')->middleware('can:role,"admin","contributor"');
+            
+            // KELOLA DATA WILAYAH
+            Route::view('/data-wilayah','admin.data-wilayah',["headtitle" => "Data Wilayah"])->name('data-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::view('/tambah-wilayah','admin.tambah_data-wilayah')->name('tambah-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::post('/tambah-wilayah','admin.tambah_data-wilayah')->name('insert-wilayah')->middleware('can:role,"admin","contributor"');
+            
             Route::view('/data-produk-umkm','admin.data-produk-umkm',["headtitle" => "Data Produk UMKM"])->name('data-produk-umkm')->middleware('can:role,"admin","contributor"');
             Route::view('/data-ulasan','admin.data-ulasan',["headtitle" => "Data Ulasan"])->name('data-ulasan')->middleware('can:role,"admin","contributor"');
             Route::view('/profil','admin.profil',["headtitle" => "Profil Admin"])->name('data-profil')->middleware('can:role,"admin","contributor"');
             Route::view('/pengaturan','admin.pengaturan',["headtitle" => "Pengaturan"])->name('data-pengaturan')->middleware('can:role,"admin","contributor"');
-            Route::view('/data-admin','admin.data-admin',["headtitle" => "Data Admin"])->name('admin')->middleware('can:role,"admin"');
+            Route::view('/data-admin','admin.data-admin',["headtitle" => "Data Admin"])->name('data-admin')->middleware('can:role,"admin"');
         });
 });
 
