@@ -3,7 +3,7 @@
 
 {{-- Mengisi konten halaman --}}
 @section('isi_konten')
-    <div class="container">
+    {{-- <div class="container">
         <div class="d-flex" style="width: 60%;">
             <a href="{{ route('tambah-wilayah') }}">
                 <button type="button" class="btn btn-primary ms-auto">Tambah Data</button>
@@ -18,7 +18,7 @@
                     <th scope="col">Aksi</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> --}}
             {{-- @foreach ($data as $row)
                 <tr>
                     <th scope="row">{{ $row->id }}</th>

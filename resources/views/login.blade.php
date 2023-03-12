@@ -16,7 +16,7 @@
     {{-- Icon --}}
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body style="background-image: url(assets/img/jembatan-suramadu.jpg)" id="bg-image">
+<body style="background-image: url({!! asset('assets/img/jembatan-suramadu.jpg') !!})" id="bg-image">
     <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39)" class="container-fluid">
         <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin" style="--bs-modal-width: 900px;">
             <div class="modal-dialog" role="document">

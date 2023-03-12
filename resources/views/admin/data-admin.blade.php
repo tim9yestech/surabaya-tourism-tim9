@@ -3,8 +3,6 @@
 
 {{-- Mengisi konten halaman --}}
 @section('isi_konten')
-
-<body>
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-7">
@@ -56,6 +54,5 @@
             </div>
         </div>
     </div>
-</body>
 
 @endsection

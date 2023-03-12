@@ -8,6 +8,14 @@ html {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
 :root {
     /* Fonts */
     --titillium: "Titillium Web", sans-serif;
@@ -38,14 +46,6 @@ body.dark {
 body {
     background: var(--white);
     overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
 }
 
 /* SIDEBAR */
@@ -112,7 +112,8 @@ li {
 
 #side-bar .side-menu {
     width: 100%;
-    margin-top: 48px;
+    margin: 48px 0 0 0;
+    padding: 0;
 }
 
 #side-bar .side-menu li {
