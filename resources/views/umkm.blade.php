@@ -103,10 +103,10 @@
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/umkm/pakaian/john-angelo.jpg" alt="John Angel" class="card-img-top">
+                                <img src="assets/img/umkm/pakaian/john-anglo.jpg" alt="John Anglo" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> John Angel </h4>
+                                <h4> John Anglo </h4>
                             </div>
                         </div>
                     </div>
@@ -132,22 +132,33 @@
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/makanan/dede-satoe.jpg" class="card-img-top" alt="Dede Satoe">
-                    <h3></h3>
+                    <div class="overlay">
+                        Dede Satoe
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/makanan/Kreasi-Fitri.jpg" class="card-img-top" alt="Kreasi-Fitri.jpg">
+                    <div class="overlay">
+                        Kreasi Fitri
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/makanan/misscrip.jpg" class="card-img-top" alt="Misscrip">
+                    <div class="overlay">
+                        Misscrip
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/makanan/lapis-kukus-pahlawan.jpg" class="card-img-top" alt="Lapis Kukus Pahlawan">
+                    <div class="overlay">
+                        Lapis Kukus Pahlawan
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,21 +167,33 @@
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/kerajinan-tangan/101-true-fashion-art.jpg" class="card-img-top" alt="Fashion Art">
+                    <div class="overlay">
+                        101 True Fashion Art
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/kerajinan-tangan/light-craft.jpg" class="card-img-top" alt="Light Craft">
+                    <div class="overlay">
+                        Light Craft
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/kerajinan-tangan/Kesra-Bordir.jpg" class="card-img-top" alt="Kesra Bordir">
+                    <div class="overlay">
+                        Kesra Bordir
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/kerajinan-tangan/Kulit-Kreasindo.jpg" class="card-img-top" alt="Kulit Kreasindo">
+                    <div class="overlay">
+                        Kulit Kreasindo
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,21 +202,35 @@
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/pakaian/Era-Krisna.jpg" class="card-img-top" alt="Era Krisna">
+                    <div class="overlay">
+                        Era Krisna
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
-                    <img src="assets/img/umkm/pakaian/john-angelo.jpg" class="card-img-top" alt="John Angelo">
+                    <a href="/produk-umkm">
+                        <img src="assets/img/umkm/pakaian/john-anglo.jpg" class="card-img-top" alt="John Angelo">
+                        <div class="overlay">
+                        John Anglo
+                    </div>
+                    </a>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/pakaian/titi-collection.jpg" class="card-img-top" alt="Titi Collection">
+                    <div class="overlay">
+                        Titi COllection
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card-content">
                     <img src="assets/img/umkm/pakaian/Vienk-Gallery.jpg" class="card-img-top" alt="Vienk-Gallery">
+                    <div class="overlay">
+                        VInk Gallery
+                    </div>
                 </div>
             </div>
         </div>

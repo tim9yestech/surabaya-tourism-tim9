@@ -238,7 +238,6 @@ li.breadcrumb-item>a{
 /* Highligh image start */
 .item img{
     height: 340px;
-
 }
 /* Highlight image end */
 
@@ -273,6 +272,37 @@ i.fa-sharp{
     -moz-border-radius: 0px !important;
     -ms-border-radius: 0px !important;
     -o-border-radius: 0px !important;
+}
+.container .card-content{
+    position: relative;
+}
+.container .card-content img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.card-content .overlay{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    /*Blacksee-through*/color: #f1f1f1 !important;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white !important;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+}
+
+
+.container .card-content:hover .overlay{
+    opacity: 1;
 }
 /* content image end */
 
