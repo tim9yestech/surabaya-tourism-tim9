@@ -33,90 +33,90 @@
                     <div class="item mb-1">
                         <div class="head-card shadow">
                             <a href="#">
-                                <img src="assets/img/1.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/kerajinan-tangan/101-true-fashion-art.jpg" alt="Kerajinan Tangan" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Kerajinan Tangan
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/2.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/kerajinan-tangan/Kartini-Bordir.jpg" alt="Kartini-Bordir" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Kartini Bordir </h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/3.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/kerajinan-tangan/light-craft.jpg" alt="light-craft.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Light Craft</h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/4.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/makanan/dede-satoe.jpg" alt="Dede Satoe" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Dede Satoe </h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/5.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/makanan/Kreasi-Fitri.jpg" alt="Kreasi-Fitri.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Kreasi Fitri </h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/6.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/makanan/misscrip.jpg" alt="Misscrip" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Misscrip </h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/7.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/pakaian/Era-Krisna.jpg" alt="Era-Krisna" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Era Krisna </h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/8.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/pakaian/john-angelo.jpg" alt="John Angel" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> John Angel </h4>
                             </div>
                         </div>
                     </div>
                     <div class="item mb-4">
                         <div class="head-card border-0 shadow ">
                             <a href="#">
-                                <img src="assets/img/9.jpg" alt="Lapis Kukus Pahlawawan" class="card-img-top">
+                                <img src="assets/img/umkm/pakaian/titi-collection.jpg" alt="Titi Collection" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4> Lapis Kukus Pahlawan</h4>
+                                <h4> Titi Collection </h4>
                             </div>
                         </div>
                     </div>

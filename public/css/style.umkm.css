@@ -259,12 +259,6 @@ i.fa-sharp{
     -ms-border-radius: 3px !important;
     -o-border-radius: 3px !important;
 }
-.badge-primary{
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    background-color: #6868ac;
-}
 .row .col .card-content img{
     height: 280px;
     border-radius: 0;
