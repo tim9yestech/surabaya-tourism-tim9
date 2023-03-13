@@ -104,7 +104,9 @@ Route::group([
             Route::view('/data-ulasan','admin.data-ulasan',["headtitle" => "Data Ulasan"])->name('data-ulasan')->middleware('can:role,"admin","contributor"');
             Route::view('/profil','admin.profil',["headtitle" => "Profil Admin"])->name('data-profil')->middleware('can:role,"admin","contributor"');
             Route::view('/pengaturan','admin.pengaturan',["headtitle" => "Pengaturan"])->name('data-pengaturan')->middleware('can:role,"admin","contributor"');
-            Route::view('/data-admin','admin.data-admin',["headtitle" => "Data Admin"])->name('data-admin')->middleware('can:role,"admin"');
+            Route::get('/data-admin','LoginAdminController@index',["headtitle" => "Data Admin"])->name('data-admin')->middleware('can:role,"admin"');
+            Route::get('/data-admin/tambah','LoginAdminController@tambahadmin')->name('tambah-admin')->middleware('can:role,"admin"');
+            Route::post('/data-admin/tambah','LoginAdminController@insertadmin')->name('insert-admin')->middleware('can:role,"admin"');
         });
 });
 

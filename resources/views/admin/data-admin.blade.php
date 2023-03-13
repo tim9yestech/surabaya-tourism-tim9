@@ -6,7 +6,7 @@
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-7">
-                    <a href="" class="btn btn-primary"><i class="fa-solid fa-square-plus" style="margin-right: 4;"></i>Tambah Data Admin</a>
+                    <a href="{{ route('tambah-admin') }}" class="btn btn-primary"><i class="fa-solid fa-square-plus" style="margin-right: 4;"></i>Tambah Data Admin</a>
                 </div>
                 <div class="col-md-5">
                     <form action="" method="post">
@@ -26,29 +26,27 @@
                     <thead style="text-align: center;">
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Foto</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Email</th>
-                            <th scope="col">No. Telp</th>
-                            <th colspan="3" scope="col">Aksi</th>
+                            <th scope="col">Role</th>
+                            <th colspan="2" scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <?php foreach(range(1,10) as $i): ?>
+                        @foreach ($data as $row)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Insert Foto</td>
-                            <td>Vira Megantari</td>
-                            <td>vira.meganta29@gmail.com</td>
-                            <td>085231341585</td>
+                            <th scope="row">{{ $row->id }}</th>
+                            <td>{{ $row->name }}</td>
+                            <td>{{ $row->email }}</td>
+                            <td>{{ $row->role }}</td>
                             <td style="text-align: center;"><i
                                     class="fa-solid fa-pen-to-square bg-success p-2 text-white rounded"
                                     data-toggle="tooltip" title="Edit"></i></td>
                             <td style="text-align: center;"><i
                                     class="fa-solid fa-trash-can bg-danger p-2 text-white rounded" data-toggle="tooltip"
                                     title="Delete"></i></td>
-                        <?php endforeach;?>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
