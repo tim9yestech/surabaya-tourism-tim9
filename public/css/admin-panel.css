@@ -276,6 +276,23 @@ body {
 #content main table i {
     width: 14px;
 }
+
+#content main .form-create label,
+#content main .form-create button,
+#content main .btn-dark span {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#content main .form-create input,
+#content main .form-create select {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+#content main .btn-dark {
+    margin-top: 20px;
+}
 /* Material Table --> Search, Filter, Table */
 /* .MuiPaper-root {
     color: rgba(0, 0, 0, 0.87);

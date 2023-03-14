@@ -14,11 +14,12 @@ class AdminController extends Controller
     }
 
     public function tambahadmin(){
-        return view('admin.tambah-data-admin');
+        $headtitle = "Tambah Admin";
+        return view('admin.tambah-data-admin',compact('headtitle'));
     }
 
     public function insertadmin(Request $request){
         Admin::create($request->all());
-        return redirect()->route('data-admin')->with('success','Data berhasil ditambahkan');
+        return redirect()->route('tambah-admin')->with('success','Data berhasil ditambahkan');
     }
 }
