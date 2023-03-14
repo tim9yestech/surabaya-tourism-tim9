@@ -9,6 +9,6 @@ class Wilayah extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['nama_wilayah'];
     protected $dates = ['created_at'];
 }

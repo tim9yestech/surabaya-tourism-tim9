@@ -93,12 +93,6 @@ Route::group([
             Route::post('logout','LoginAdminController@logout')->name('admin.logout');
             Route::view('/','admin.dashboard',["headtitle" => "Dashboard"])->name('admin.dashboard');
             Route::view('/data-destinasi','admin.data-destinasi',["headtitle" => "Data Destinasi Wisata"])->name('data-destinasi')->middleware('can:role,"admin","contributor"');
-            
-            // KELOLA DATA WILAYAH
-            Route::view('/data-wilayah','admin.data-wilayah',["headtitle" => "Data Wilayah"])->name('data-wilayah')->middleware('can:role,"admin","contributor"');
-            // Route::view('/tambah-wilayah','admin.tambah-data-wilayah')->name('tambah-wilayah')->middleware('can:role,"admin","contributor"');
-            // Route::post('/tambah-wilayah','admin.tambah-data-wilayah')->name('insert-wilayah')->middleware('can:role,"admin","contributor"');
-            
             Route::view('/data-produk-umkm','admin.data-produk-umkm',["headtitle" => "Data Produk UMKM"])->name('data-produk-umkm')->middleware('can:role,"admin","contributor"');
             Route::view('/data-ulasan','admin.data-ulasan',["headtitle" => "Data Ulasan"])->name('data-ulasan')->middleware('can:role,"admin","contributor"');
             Route::view('/profil','admin.profil',["headtitle" => "Profil Admin"])->name('data-profil')->middleware('can:role,"admin","contributor"');
@@ -111,6 +105,14 @@ Route::group([
             Route::get('/data-admin/edit/{id}','AdminController@editadmin')->name('edit-admin')->middleware('can:role,"admin"');
             Route::post('/data-admin/edit/{id}','AdminController@updateadmin')->name('update-admin')->middleware('can:role,"admin"');
             Route::get('/data-admin/hapus/{id}','AdminController@hapusadmin')->name('hapus-admin')->middleware('can:role,"admin"');
+            
+            // KELOLA DATA WILAYAH
+            Route::get('/data-wilayah','WilayahController@index',["headtitle" => "Data Wilayah"])->name('data-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-wilayah/tambah','WilayahController@tambahwilayah')->name('tambah-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-wilayah/tambah','WilayahController@insertwilayah')->name('insert-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-wilayah/edit/{id}','WilayahController@editwilayah')->name('edit-wilayah')->middleware('can:role,"admin"');
+            Route::post('/data-wilayah/edit/{id}','WilayahController@updatewilayah')->name('update-wilayah')->middleware('can:role,"admin"');
+            Route::get('/data-wilayah/hapus/{id}','WilayahController@hapuswilayah')->name('hapus-wilayah')->middleware('can:role,"admin"');
         });
 });
 
