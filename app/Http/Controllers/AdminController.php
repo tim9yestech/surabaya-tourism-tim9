@@ -34,4 +34,10 @@ class AdminController extends Controller
         $data->update($request->all());
         return redirect()->route('data-admin');
     }
+
+    public function hapusadmin($id){
+        $data = Admin::find($id);
+        $data->delete();
+        return redirect()->route('data-admin');
+    }
 }

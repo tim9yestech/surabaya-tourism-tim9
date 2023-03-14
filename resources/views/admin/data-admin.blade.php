@@ -39,7 +39,7 @@
                             <td class="text-center">                  
                                 <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-sm btn-warning" href="{{ route('edit-admin', $row->id) }}"><i class="fa fa-wrench"></i></a>
-                                <a class="btn btn-sm btn-danger" href=""><i class="fa fa-trash"></i></a>
+                                <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php $no++; ?>
