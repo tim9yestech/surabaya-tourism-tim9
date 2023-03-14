@@ -22,4 +22,16 @@ class AdminController extends Controller
         Admin::create($request->all());
         return redirect()->route('tambah-admin')->with('success','Data berhasil ditambahkan');
     }
+
+    public function editadmin($id){
+        $data = Admin::find($id);
+        $headtitle = "Edit Data Admin";
+        return view('admin.edit-data-admin',compact('data','headtitle'));
+    }
+
+    public function updateadmin(Request $request, $id){
+        $data = Admin::find($id);
+        $data->update($request->all());
+        return redirect()->route('data-admin');
+    }
 }

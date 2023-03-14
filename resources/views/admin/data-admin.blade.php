@@ -34,11 +34,11 @@
                         <tr>
                             <td class="text-center">{{ $no }}</td>
                             <td>{{ $row->name }}</td>
-                            <td class="text-center">{{ $row->role }}</td>
+                            <td class="text-center text-capitalize">{{ $row->role }}</td>
                             <td>{{ $row->email }}</td>
                             <td class="text-center">                  
                                 <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-sm btn-warning" href=""><i class="fa fa-wrench"></i></a>
+                                <a class="btn btn-sm btn-warning" href="{{ route('edit-admin', $row->id) }}"><i class="fa fa-wrench"></i></a>
                                 <a class="btn btn-sm btn-danger" href=""><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
