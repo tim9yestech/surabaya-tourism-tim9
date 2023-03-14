@@ -3,54 +3,53 @@
 
 {{-- Mengisi konten halaman --}}
 @section('isi_konten')
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-7">
-                    <a href="{{ route('tambah-admin') }}" class="btn btn-primary"><i class="fa-solid fa-square-plus" style="margin-right: 4;"></i>Tambah Data Admin</a>
-                </div>
-                <div class="col-md-5">
-                    <form action="" method="post">
-                        <div class="input-group">
-                            <input type="text" name="keyword" class="form-control" placeholder="masukkan kata kunci"
-                                autocomplete="off" autofocus>
-                            <div class="input-group-append">
-                                <button type="submit" name="cari" class="btn btn-secondary pl-4 pr-4">cari</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="container">
+    <h2 class="mb-4">{{ $headtitle }}</h2>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <input class="form-control light-table-filter" data-table="table-hover" type="search" aria-invalid="false" placeholder="Cari administrator">
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <a href="pendaftar_tambah.php" class="btn btn-sm btn-primary">
+                <i class="fa fa-plus"></i> Tambah Data
+            </a>
+        </div>
+    </div>
 
+    <div class="card">
+        <div class="card-body">
             <div class="scroll">
-                <table class="table table-striped table-bordered mt-4">
-                    <thead style="text-align: center;">
+            <div class="table-responsive">             
+                <table class="table table-bordered" id="tableku">
+                    <thead style="font-size: 14px;">
                         <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Role</th>
-                            <th colspan="2" scope="col">Aksi</th>
+                            <th class="text-center" width="1%">No</th>
+                            <th class="text-center" width="25%">Nama</th>
+                            <th class="text-center">Role</th>                
+                            <th class="text-center">Email</th>   
+                            <th colspan=3 class="text-center">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style="font-size: 13px;">
+                        <?php $no=1; ?>
                         @foreach ($data as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <td class="text-center">{{ $no }}</td>
                             <td>{{ $row->name }}</td>
+                            <td class="text-center">{{ $row->role }}</td>
                             <td>{{ $row->email }}</td>
-                            <td>{{ $row->role }}</td>
-                            <td style="text-align: center;"><i
-                                    class="fa-solid fa-pen-to-square bg-success p-2 text-white rounded"
-                                    data-toggle="tooltip" title="Edit"></i></td>
-                            <td style="text-align: center;"><i
-                                    class="fa-solid fa-trash-can bg-danger p-2 text-white rounded" data-toggle="tooltip"
-                                    title="Delete"></i></td>
+                            <td class="text-center">                  
+                                <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-sm btn-warning" href=""><i class="fa fa-wrench"></i></a>
+                                <a class="btn btn-sm btn-danger" href=""><i class="fa fa-trash"></i></a>
+                            </td>
                         </tr>
+                        <?php $no++; ?>
                         @endforeach
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
     </div>
+</div>
 
 @endsection

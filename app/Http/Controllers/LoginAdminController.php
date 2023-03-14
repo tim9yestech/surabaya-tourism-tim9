@@ -40,19 +40,4 @@ class LoginAdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect()->route('admin.login');
     }
-
-    public function index(){
-        $data = Admin::all();
-        $headtitle = "Data Admin";
-        return view('admin.data-admin',compact('data','headtitle'));
-    }
-
-    public function tambahadmin(){
-        return view('admin.tambah-data-admin');
-    }
-
-    public function insertadmin(Request $request){
-        Admin::create($request->all());
-        return redirect()->route('data-admin')->with('success','Data berhasil ditambahkan');
-    }
 }

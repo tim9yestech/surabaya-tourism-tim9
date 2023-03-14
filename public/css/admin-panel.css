@@ -258,23 +258,58 @@ body {
     overflow-y: auto;
 }
 
-#content main .head-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-gap: 16px;
-    flex-wrap: wrap;
+#content main h2 {
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-#content main .head-title .left h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--dark);
-    text-transform: uppercase;
+#content main input[type="search"] {
+    width: 70%;
+    float: right;
+    border: 1px solid var(--bs-border-color);
 }
+
+#content main input[placeholder="Cari administrator"] {
+    font-size: 13px;
+}
+
+#content main table i {
+    width: 14px;
+}
+/* Material Table --> Search, Filter, Table */
+/* .MuiPaper-root {
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0, 4, 0, 0, 2, 1) 0ms;
+    background-color: #fff;
+}
+
+.MuiCard-root {
+    overflow: hidden;
+}
+
+.MuiPaper-elevation1 {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.MuiPaper-rounded {
+    border-radius: 4px;
+}
+
+.MuiCardContent-root:last-child {
+    padding-bottom: 24px;
+}
+
+.MuiCardContent-root {
+    padding: 16px;
+}
+
+.jss298 {
+    padding: 0 40px;
+} */
+
 .scroll {
-    height: 400px;
+    height: 350px;
     width: 100%;
     overflow-y: scroll;
     overflow-x: scroll;

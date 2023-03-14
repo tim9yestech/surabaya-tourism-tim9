@@ -20,7 +20,7 @@
     <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39)" class="container-fluid">
         <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin" style="--bs-modal-width: 900px;">
             <div class="modal-dialog" role="document">
-                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none; background-color: #ffffff54;">
+                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none; background-color: #ffffff54;">    
                     <div class="row">
                         <div class="container col-lg-7 col-md-12 text-center">
                             <img class="img-fluid" src="{!! asset('assets/img/img-login.jpg') !!}" alt="Wisata Surabaya" style="max-width: 100%; height: 100%; border-radius: 1rem;">
@@ -56,21 +56,6 @@
                                             <i class='bx bxs-lock-alt'></i>
                                         </span>
                                     </div>
-                                    {{-- <div class="wrap-input">
-                                        <label for="role" class="label-input my-2">Role</label>
-                                        <select id="role" class="input shadow {{ $errors->has('role') ? ' is-invalid':'' }}" style="border: none;">
-                                            <option>-- Pilih Role --</option>
-                                            <option value="admin">Admin</option>
-                                            <option value="kontributor">Kontributor</option>
-                                        </select>
-                                        @error('role')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                        <span class="focus-input"></span>
-                                        <span class="symbol-input">
-                                            <i class='bx bxs-user-check'></i>
-                                        </span>
-                                    </div> --}}
                                 </div>
                                 <p style="font-weight: 400; font-size: 75%;">
                                     Lupa akun / minat jadi Kontributor? Hubungi <a class="fw-bold" href="https://wa.wizard.id/caf000" target="_blank">tim Programmer</a>. 
