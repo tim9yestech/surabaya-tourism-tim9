@@ -8,9 +8,9 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <input class="form-control light-table-filter" data-table="table-hover" type="search" aria-invalid="false" placeholder="Cari administrator">
         <div class="btn-toolbar mb-2 mb-md-0">
-            <a href="{{ route('tambah-admin') }}" class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#modal-create">
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-create">
                 <i class="fa fa-plus"></i> Tambah Data
-            </a>
+            </button>
         </div>
     </div>
 
@@ -52,7 +52,7 @@
     </div>
 </div>
 
-{{-- <div class="modal fade" id="modal-create" tabindex="-1" aria-labelledby="modal-create" aria-hidden="true">
+<div class="modal fade" id="modal-create" tabindex="-1" aria-labelledby="modal-create" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -61,9 +61,9 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body"> --}}
+            <div class="modal-body">
                 {{-- Form Tambah Admin --}}
-                {{-- <form action="" method="POST">
+                <form action="" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="">Nama Admin</label>
@@ -86,6 +86,6 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 
 @endsection

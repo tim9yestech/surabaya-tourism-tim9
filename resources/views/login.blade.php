@@ -17,15 +17,15 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body style="background-image: url({!! asset('assets/img/jembatan-suramadu.jpg') !!})" id="bg-image">
-    <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39)" class="container-fluid">
+    <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39); padding: 0;" class="container-fluid">
         <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin" style="--bs-modal-width: 900px;">
             <div class="modal-dialog" role="document">
-                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none; background-color: #ffffff54;">    
-                    <div class="row">
-                        <div class="container col-lg-7 col-md-12 text-center">
+                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="max-width: 626px; margin-left: auto; margin-right: auto; border: none; background-color: #ffffff54;">    
+                    <div class="row" style="width: fit-content;">
+                        <div class="container col-lg-12 col-md-12 text-center" style="width: fit-content; margin: 0;">
                             <img class="img-fluid" src="{!! asset('assets/img/img-login.jpg') !!}" alt="Wisata Surabaya" style="max-width: 100%; height: 100%; border-radius: 1rem;">
                         </div>
-                        <div class="container col-lg-5 col-md-12">
+                        <div class="container col-lg-12 col-md-12" style="margin: 0;">
                             <h4 class="fw-semibold mb-3 text-center">Login Administrator</h4>
                             <div class="py-1" style="border-top: 3px solid #6868ac;"></div>
                             <p class="py-2" style="line-height: 1.5; font-size: 14px;">
