@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Wilayah extends Model
+class Kategori_Destinasi extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama_wilayah'];
-    protected $dates = ['created_at', 'updated_at'];
+    protected $fillable = ['kategori'];
+    protected $dates = ['created_at'];
 }

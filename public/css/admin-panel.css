@@ -267,9 +267,6 @@ body {
     width: 70%;
     float: right;
     border: 1px solid var(--bs-border-color);
-}
-
-#content main input[placeholder="Cari administrator"] {
     font-size: 13px;
 }
 

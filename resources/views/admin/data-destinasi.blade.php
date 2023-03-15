@@ -3,63 +3,79 @@
 
 {{-- Mengisi konten halaman --}}
 @section('isi_konten')
-<body>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-7">
-                    <a href="" class="btn btn-primary"><i class="fa-solid fa-square-plus" style="margin-right: 4;"></i>Tambah Data Destinasi</a>
-                </div>
-                <div class="col-md-5">
-                    <form action="" method="post">
-                        <div class="input-group">
-                            <input type="text" name="keyword" class="form-control" placeholder="masukkan kata kunci"
-                                autocomplete="off" autofocus>
-                            <div class="input-group-append">
-                                <button type="submit" name="cari" class="btn btn-secondary pl-4 pr-4">cari</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="container">
+    <h2 class="mb-4">{{ $headtitle }}</h2>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <input class="form-control light-table-filter" data-table="table-hover" type="search" aria-invalid="false" placeholder="Cari administrator">
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <a href="{{ route('data-kategori-destinasi') }}" class="btn btn-sm btn-primary" type="button">
+                Data Kategori
+            </a>
+        </div>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <a href="" class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#modal-create">
+                <i class="fa fa-plus"></i> Tambah Data
+            </a>
+        </div>
+    </div>
 
+    <div class="card">
+        <div class="card-body">
             <div class="scroll">
-                <table class="table table-striped table-bordered mt-4">
-                    <thead style="text-align: center;">
+            <div class="table-responsive">             
+                <table class="table table-bordered" id="tableku">
+                    <thead style="font-size: 14px;">
                         <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">Deskripsi</th>
-                            <th scope="col">Alamat Website</th>
-                            <th scope="col">Jam Operasional</th>
-                            <th scope="col">Hari Operasional</th>
-                            <th scope="col">Foto</th>
-                            <th colspan="3" scope="col">Aksi</th>
+                            <th class="text-center" width="1%">No</th>
+                            <th class="text-center">Nama Destinasi</th>
+                            <th class="text-center">Kategori</th>
+                            <th class="text-center">Alamat</th>                
+                            <th class="text-center">Wilayah</th>                  
+                            <th colspan=3 class="text-center">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
-                    <?php foreach(range(1,10) as $i): ?>
+                    <tbody style="font-size: 13px;">
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Tunjungan Plaza</td>
-                            <td>Jl. Tunjungan</td>
-                            <td>Mall Tunjungan Plaza ....</td>
-                            <td>tunjunganplaza.com</td>
-                            <td>09.00-22.00</td>
-                            <td>tSenin - Minggu</td>
-                            <td>Insert Foto</td>
-                            <td style="text-align: center;"><i
-                                    class="fa-solid fa-pen-to-square bg-success p-2 text-white rounded"
-                                    data-toggle="tooltip" title="Edit"></i></td>
-                            <td style="text-align: center;"><i
-                                    class="fa-solid fa-trash-can bg-danger p-2 text-white rounded" data-toggle="tooltip"
-                                    title="Delete"></i></td>
-                        <?php endforeach;?>
+                            <td class="text-center">1</td>
+                            <td>Museum Cancer Surabaya</td>
+                            <td>History</td>
+                            <td>Jl. Wonokusumo Lor 5 No. 16-19</td>
+                            <td>Surabaya Utara</td>
+                            <td class="text-center">                  
+                                <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-sm btn-warning" href=""><i class="fa fa-wrench"></i></a>
+                                <a class="btn btn-sm btn-danger" href=""><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td>Museum Cancer Surabaya</td>
+                            <td>History</td>
+                            <td>Jl. Wonokusumo Lor 5 No. 16-19</td>
+                            <td>Surabaya Utara</td>
+                            <td class="text-center">                  
+                                <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-sm btn-warning" href=""><i class="fa fa-wrench"></i></a>
+                                <a class="btn btn-sm btn-danger" href=""><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td>Museum Cancer Surabaya</td>
+                            <td>History</td>
+                            <td>Jl. Wonokusumo Lor 5 No. 16-19</td>
+                            <td>Surabaya Utara</td>
+                            <td class="text-center">                  
+                                <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-sm btn-warning" href=""><i class="fa fa-wrench"></i></a>
+                                <a class="btn btn-sm btn-danger" href=""><i class="fa fa-trash"></i></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
     </div>
-</body>
+</div>
 @endsection
