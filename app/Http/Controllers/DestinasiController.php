@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destinasi;
+use App\Models\Wilayah;
 use Illuminate\Http\Request;
 
 class DestinasiController extends Controller
@@ -15,6 +16,22 @@ class DestinasiController extends Controller
     public function index()
     {
         // $data = Admin::all();
+        $destinasi = Destinasi::all();
+        $sunanAmpel = $destinasi[1];
+        $categories = $sunanAmpel->categories;
+
+        $wilayah = Wilayah::all();
+        dd($wilayah[3]->desinations);
+
+        dd([
+            'id' => $sunanAmpel->id,
+            'name' => $sunanAmpel->nama,
+            'wilayah' => $sunanAmpel->wilayah->nama_wilayah,
+            'kategori' => [
+                $categories[0]->id => $categories[0]->kategori,
+                $categories[1]->id => $categories[1]->kategori,
+            ]
+        ]);
         $headtitle = "Data Destinasi";
         return view('admin.data-destinasi',compact('headtitle'));
     }

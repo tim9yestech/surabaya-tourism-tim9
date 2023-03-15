@@ -11,4 +11,9 @@ class Wilayah extends Model
 
     protected $fillable = ['nama_wilayah'];
     protected $dates = ['created_at', 'updated_at'];
+
+    public function desinations()
+    {
+        return $this->hasMany(Destinasi::class, 'id_wilayah');
+    }
 }
