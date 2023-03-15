@@ -16,7 +16,11 @@ class DestinasiController extends Controller
     public function index()
     {
         // $data = Admin::all();
-        $destinasi = Destinasi::all();
+        $destinasi = Destinasi::all(); // 3
+        $data = $destinasi->random(2);
+        
+        dd($destinasi->random(2));
+
         $sunanAmpel = $destinasi[1];
         $categories = $sunanAmpel->categories;
 
