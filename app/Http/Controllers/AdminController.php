@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,12 @@ class AdminController extends Controller
     }
 
     public function insertadmin(Request $request){
-        Admin::create($request->all());
+        Admin::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'role' => $request->role,
+            'password' => Hash::make($request->password),
+        ]);
         return redirect()->route('tambah-admin')->with('success','Data berhasil ditambahkan');
     }
 
