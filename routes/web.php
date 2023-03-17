@@ -99,8 +99,7 @@ Route::group([
             
             // KELOLA DATA ADMIN
             Route::get('/data-admin','AdminController@index',["headtitle" => "Data Admin"])->name('data-admin')->middleware('can:role,"admin"');
-            Route::get('/data-admin/tambah','AdminController@tambahadmin')->name('tambah-admin')->middleware('can:role,"admin"');
-            Route::post('/data-admin/tambah','AdminController@insertadmin')->name('insert-admin')->middleware('can:role,"admin"');
+            Route::post('/data-admin/tambah','AdminController@tambahadmin')->name('tambah-admin')->middleware('can:role,"admin"');
             Route::get('/data-admin/edit/{id}','AdminController@editadmin')->name('edit-admin')->middleware('can:role,"admin"');
             Route::post('/data-admin/edit/{id}','AdminController@updateadmin')->name('update-admin')->middleware('can:role,"admin"');
             Route::get('/data-admin/hapus/{id}','AdminController@hapusadmin')->name('hapus-admin')->middleware('can:role,"admin"');

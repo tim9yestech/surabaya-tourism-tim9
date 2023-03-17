@@ -17,15 +17,15 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body style="background-image: url({!! asset('assets/img/jembatan-suramadu.jpg') !!})" id="bg-image">
-    <div style="height: 100%; background-color: rgba(194, 85, 216, 0.39); padding: 0;" class="container-fluid">
+    <div class="container-fluid cover">
         <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin" style="--bs-modal-width: 900px;">
             <div class="modal-dialog" role="document">
-                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="max-width: 626px; margin-left: auto; margin-right: auto; border: none; background-color: #ffffff54;">    
+                <div class="modal-content rounded-4 shadow d-flex flex-row padding-box" style="border: none; background-color: #ffffff54;">    
                     <div class="row" style="width: fit-content;">
-                        <div class="container col-lg-12 col-md-12 text-center" style="width: fit-content; margin: 0;">
-                            <img class="img-fluid" src="{!! asset('assets/img/img-login.jpg') !!}" alt="Wisata Surabaya" style="max-width: 100%; height: 100%; border-radius: 1rem;">
+                        <div class="container col-lg-7 col-md-12 text-center" style="margin: 0;">
+                            <img class="img-fluid" src="{!! asset('assets/img/img-login.jpg') !!}" alt="Wisata Surabaya">
                         </div>
-                        <div class="container col-lg-12 col-md-12" style="margin: 0;">
+                        <div class="container col-lg-5 col-md-12" style="margin: 0;">
                             <h4 class="fw-semibold mb-3 text-center">Login Administrator</h4>
                             <div class="py-1" style="border-top: 3px solid #6868ac;"></div>
                             <p class="py-2" style="line-height: 1.5; font-size: 14px;">
@@ -33,32 +33,31 @@
                             </p>
                             <form action="#" method="POST">
                                 @csrf
-                                <div class="my-2" style="border: 2px solid #6868ac; border-radius: 3px;">
+                                <div class="my-2 border-form">
                                     <div class="wrap-input">
                                         <label for="email" class="label-input my-2">Email</label>
-                                        <input type="email" id="email" name="email" placeholder="name@example.com" class="input shadow {{ $errors -> has('email') ? 'is-invalid' : '' }}">
+                                        <input type="email" id="email" name="email" placeholder="name@example.com" class="input shadow form-control {{ $errors -> has('email') ? 'is-invalid' : '' }}">
                                         @error('email')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
-                                        <span class="focus-input"></span>
                                         <span class="symbol-input">
                                             <i class='bx bxs-envelope'></i>
                                         </span>
                                     </div>
                                     <div class="wrap-input">
                                         <label for="password" class="label-input my-2">Password</label>
-                                        <input type="password" id="password" name="password" placeholder="********" class="input shadow {{ $errors -> has('password') ? 'is-invalid' : '' }}" style="background-color: rgba(255, 255, 255, 0.651);">
+                                        <input type="password" id="password" name="password" class="input input-bg shadow form-control {{ $errors -> has('password') ? 'is-invalid' : '' }}">
                                         @error('password')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
-                                        <span class="focus-input"></span>
                                         <span class="symbol-input">
                                             <i class='bx bxs-lock-alt'></i>
                                         </span>
                                     </div>
                                 </div>
                                 <p style="font-weight: 400; font-size: 75%;">
-                                    Lupa akun / minat jadi Kontributor? Hubungi <a class="fw-bold" href="https://wa.wizard.id/caf000" target="_blank">tim Programmer</a>. 
+                                    Lupa akun / minat jadi Kontributor? Hubungi 
+                                    <a class="fw-bold" href="https://wa.wizard.id/caf000" target="_blank">tim Programmer</a>. 
                                 </p>
                                 <div class="row text-center">
                                     <div class="col-6 my-1">

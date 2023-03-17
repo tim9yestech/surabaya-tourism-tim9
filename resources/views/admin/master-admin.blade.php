@@ -51,19 +51,19 @@
             @endcan
             <li class="{{ ($headtitle === "Data Wilayah") ? 'active' : '' }}">
                 <a href="{{ route('data-wilayah') }}">
-                    <i class='bx bxs-data'></i>
+                    <i class='bx bxs-map-pin'></i>
                     <span>Data Wilayah</span>
                 </a>
             </li>
             <li class="{{ ($headtitle === "Data Destinasi Wisata") ? 'active' : '' }}">
                 <a href="{{ route('data-destinasi') }}">
-                    <i class='bx bxs-data'></i>
+                    <i class='bx bxs-map-alt'></i>
                     <span>Data Destinasi Wisata</span>
                 </a>
             </li>
             <li class="{{ ($headtitle === "Data Produk UMKM") ? 'active' : '' }}">
                 <a href="{{ route('data-produk-umkm') }}">
-                    <i class='bx bxs-data'></i>
+                    <i class='bx bxs-store-alt'></i>
                     <span>Data Produk UMKM</span>
                 </a>
             </li>

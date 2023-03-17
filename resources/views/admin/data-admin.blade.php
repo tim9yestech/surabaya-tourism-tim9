@@ -17,75 +17,111 @@
     <div class="card">
         <div class="card-body">
             <div class="scroll">
-            <div class="table-responsive">             
-                <table class="table table-bordered" id="tableku">
-                    <thead style="font-size: 14px;">
-                        <tr>
-                            <th class="text-center" width="1%">No</th>
-                            <th class="text-center" width="25%">Nama</th>
-                            <th class="text-center">Role</th>                
-                            <th class="text-center">Email</th>   
-                            <th colspan=3 class="text-center">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody style="font-size: 13px;">
-                        <?php $no=1; ?>
-                        @foreach ($data as $row)
-                        <tr>
-                            <td class="text-center">{{ $no }}</td>
-                            <td>{{ $row->name }}</td>
-                            <td class="text-center text-capitalize">{{ $row->role }}</td>
-                            <td>{{ $row->email }}</td>
-                            <td class="text-center">                  
-                                <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-sm btn-warning" href="{{ route('edit-admin', $row->id) }}"><i class="fa fa-wrench"></i></a>
-                                <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}"><i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <?php $no++; ?>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                <div class="table-responsive">             
+                    <table class="table table-bordered" id="tableku">
+                        <thead style="font-size: 14px;">
+                            <tr>
+                                <th class="text-center" width="1%">No</th>
+                                <th class="text-center" width="25%">Nama</th>
+                                <th class="text-center">Role</th>                
+                                <th class="text-center">Email</th>   
+                                <th colspan=3 class="text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size: 13px;">
+                            <?php $no=1; ?>
+                            @foreach ($data as $row)
+                            <tr>
+                                <td class="text-center">{{ $no }}</td>
+                                <td>{{ $row->name }}</td>
+                                <td class="text-center text-capitalize">{{ $row->role }}</td>
+                                <td>{{ $row->email }}</td>
+                                <td class="text-center">      
+                                    <a class="btn btn-sm btn-warning" type="button" href="{{ route('edit-admin', $row->id) }}">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>            
+                                    <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <?php $no++; ?>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+{{-- Tambah Data --}}
 <div class="modal fade" id="modal-create" tabindex="-1" aria-labelledby="modal-create" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered" id="modal-dialog" style="max-width: 400px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Tambah Admin</h4>
+                <h4 class="modal-title fw-bold text-uppercase">Tambah Admin</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 {{-- Form Tambah Admin --}}
-                <form action="" method="POST">
+                <form class="form-create" action="{{ route('tambah-admin') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
-                        <label for="">Nama Admin</label>
-                        <input type="text" class="form-control" id="name" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Role</label>
-                        <input type="text" class="form-control" id="role" name="role">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Simpan Data</button>
+                    <label for="name" class="form-label">Nama Admin</label>
+                    <input type="text" name="name" id="name" class="form-control">
+    
+                    <label for="role" class="form-label">Role</label>
+                    <select name="role" id="role" class="form-control">
+                        <option>--Pilih Role--</option>
+                        <option value="admin">Admin</option>
+                        <option value="contributor">Contributor</option>
+                    </select>
+    
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control">
+    
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+    
+                    <button type="submit" class="btn text-uppercase" style="background: #6868ac; color: #fff">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+{{-- Edit Data
+<div class="modal fade" id="modal-edit" tabindex="-1" aria-labelledby="modal-edit" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="modal-dialog" style="max-width: 400px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title fw-bold text-uppercase">Tambah Admin</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"> --}}
+                {{-- Form Edit Data Admin --}}
+                {{-- <form class="form-create" action="{{ route('edit-admin', $data->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <label for="name" class="form-label">Nama Admin</label>
+                    <input type="text" name="name" id="name" class="form-control" value="{{ $data->name }}">
+    
+                    <label for="role" class="form-label">Role</label>
+                    <select name="role" id="role" class="form-control" value="{{ $data->role }}">
+                        <option>--Pilih Role--</option>
+                        <option value="admin">Admin</option>
+                        <option value="contributor">Contributor</option>
+                    </select>
+    
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" value="{{ $data->email }}">
+    
+                    <button type="submit" class="btn text-uppercase" style="background: #6868ac; color: #fff">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> --}}
 
 @endsection
