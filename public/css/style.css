@@ -213,7 +213,7 @@ input:not(:placeholder-shown) ~ .reset {
 }
 .d-flex{
     margin-top: 20px;
-    margin-left: 77.5%;
+    margin-left: 200%;
     display: flex !important;
 }
 .group-shortcut{

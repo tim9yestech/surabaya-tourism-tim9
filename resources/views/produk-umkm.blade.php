@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('assets/img/Logo-Surabaya.png') }}">
-    
+
     <title>John Anglo - Produk UMKM Surabaya</title>
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
     {{-- Style --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="{!! asset('css/umkm.css') !!}">
     {{-- Icon --}}
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg py-0">
         <div class="container clearfix">
             <a href="/">
-                <img src="{{ asset('assets/img/Sparkling-Surabaya.png') }}" alt="Wisata Surabaya" style="width : 100px;">
+                <img src="{{ asset('assets/img/Sparkling-Surabaya.png') }}" alt="Wisata Surabaya"
+                    style="width : 100px;">
             </a>
             <div class="ms-auto tb-size">
                 <ul class="d-flex fw-semibold justify-content-end align-items-center nav-menu">
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/destinasi">Destinasi</a></li>
                     <li class="active"><a href="/umkm">Umkm</a></li>
-                    <li data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="#">Informasi</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><button class="dropdown-item" type="button"><a href="#">E-Book Wisata</a></button></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -69,7 +69,8 @@
     </section>
     <section class="py">
         <div class="container">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 65px;">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+                style="margin-bottom: 65px;">
                 <div class="carousel-inner"style="border-radius: 15px; max-height: 500px;">
                     <div class="carousel-item active">
                         <img src="{{ asset('assets/img/John-Anglo(1).jpg') }}" class="d-block w-100" alt="John Anglo">
@@ -81,16 +82,19 @@
                         <img src="{{ asset('assets/img/John-Anglo(3).jpg') }}" class="d-block w-100" alt="John Anglo">
                     </div>
                 </div>
-                <button class="carousel-control-prev owl-nav" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <button class="carousel-control-prev owl-nav" type="button"
+                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next owl-nav" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <button class="carousel-control-next owl-nav" type="button"
+                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div style="display: inline-block; background: #6868ac; border-radius: 5px; padding: 10px; margin-bottom: 45px;">
+            <div
+                style="display: inline-block; background: #6868ac; border-radius: 5px; padding: 10px; margin-bottom: 45px;">
                 <span class="fw-semibold" style="font-size: 18px; color: #fff;">John Anglo</span>
             </div>
             <div class="d-flex justify-content-between mb-5" style="width: 100%; font-size: 15px;">
@@ -118,7 +122,8 @@
                     <tr>
                         <th>Outlet</th>
                         <td>:</td>
-                        <td>Pakuwon City Mall 1 (sebelah Resto Daun Lada), Jl. Raya Laguna KJW Putih Tambak No. 2, Surabaya Timur</td>
+                        <td>Pakuwon City Mall 1 (sebelah Resto Daun Lada), Jl. Raya Laguna KJW Putih Tambak No. 2,
+                            Surabaya Timur</td>
                     </tr>
                     <tr>
                         <th>Website</th>
@@ -154,8 +159,9 @@
                 <div style="width: 40%;">
                     <div style="display: inline-block; border-radius: 5px; background: #6868ac; padding: 15px 40px;">
                         <p style="color: #fff; margin-top: 16px; text-align: justify;">
-                            UKM Q - LIT JOHN ANGLO leather goods merupakan usaha perorangan yang memproduksi dengan bahan baku kulit untuk
-                            dijadikan Jaket, Tas, Sepatu, Sabuk, dan Dompet. 
+                            UKM Q - LIT JOHN ANGLO leather goods merupakan usaha perorangan yang memproduksi dengan
+                            bahan baku kulit untuk
+                            dijadikan Jaket, Tas, Sepatu, Sabuk, dan Dompet.
                         </p>
                     </div>
                 </div>
@@ -166,7 +172,8 @@
                     <div class="col-md-4 text-center my-2">
                         <a href="#" class="text-dark">
                             <div class="img-effect">
-                                <img class="img-fluid" src="{{ asset('assets/img/Monumen-Tugu-Pahlawan(1).jpg') }}" alt="Monumen Tugu Pahlawan">
+                                <img class="img-fluid" src="{{ asset('assets/img/Monumen-Tugu-Pahlawan(1).jpg') }}"
+                                    alt="Monumen Tugu Pahlawan">
                             </div>
                             <div class="mt-3">
                                 <div>
@@ -184,7 +191,8 @@
                     <div class="col-md-4 text-center my-2">
                         <a href="#" class="text-dark">
                             <div class="img-effect">
-                                <img class="img-fluid" src="{{ asset('assets/img/Monumen-Tugu-Pahlawan(1).jpg') }}" alt="Monumen Tugu Pahlawan">
+                                <img class="img-fluid" src="{{ asset('assets/img/Monumen-Tugu-Pahlawan(1).jpg') }}"
+                                    alt="Monumen Tugu Pahlawan">
                             </div>
                             <div class="mt-3">
                                 <div>
@@ -202,7 +210,8 @@
                     <div class="col-md-4 text-center my-2">
                         <a href="#" class="text-dark">
                             <div class="img-effect">
-                                <img class="img-fluid" src="{{ asset('assets/img/Monumen-Tugu-Pahlawan(1).jpg') }}" alt="Monumen Tugu Pahlawan">
+                                <img class="img-fluid" src="{{ asset('assets/img/Monumen-Tugu-Pahlawan(1).jpg') }}"
+                                    alt="Monumen Tugu Pahlawan">
                             </div>
                             <div class="mt-3">
                                 <div>
@@ -224,6 +233,9 @@
 
     @include('partials.footer')
     {{-- Bootstrap --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
