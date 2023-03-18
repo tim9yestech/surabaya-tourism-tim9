@@ -14,6 +14,8 @@
     {{-- Icon --}}
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    {{-- Ajax --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,9 +32,9 @@
                     <span>{{ Auth::user()->role }}</span>
                 </div>
             </a>
-            <div class="bar-user admin-name">
+            {{-- <div class="bar-user admin-name">
                 <span>{{ Auth::user()->name }}</span>
-            </div>
+            </div> --}}
         </div>
         <ul class="side-menu top">
             <li class="{{ ($headtitle === "Dashboard") ? 'active' : '' }}">
@@ -61,6 +63,11 @@
                     <span>Data Destinasi Wisata</span>
                 </a>
             </li>
+            <li class="{{ ($headtitle === "Data Kategori Destinasi") ? 'active' : '' }}">
+                <a href="{{ route('data-kategori-destinasi') }}">
+                    <span style="padding-left: 40px;">Kategori Destinasi</span>
+                </a>
+            </li>
             <li class="{{ ($headtitle === "Data Produk UMKM") ? 'active' : '' }}">
                 <a href="{{ route('data-produk-umkm') }}">
                     <i class='bx bxs-store-alt'></i>
@@ -76,30 +83,6 @@
             </li>
             @endcan
         </ul>
-        <div class="dividing-line"></div>
-        <ul class="side-menu top" style="margin-top: 29px;">
-            <li class="{{ ($headtitle === "Profil Admin") ? 'active' : '' }}">
-                <a href="{{ route('data-profil') }}">
-                    <i class='bx bxs-user-circle'></i>
-                    <span>Profil</span>
-                </a>
-            </li>
-            <li class="{{ ($headtitle === "Pengaturan") ? 'active' : '' }}">
-                <a href="{{ route('data-pengaturan') }}">
-                    <i class='bx bxs-cog'></i>
-                    <span>Pengaturan</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
-                    <i class='bx bxs-log-out-circle'></i>
-                    <span>Logout</span>
-                </a>
-                <form action="{{ route('admin.logout') }}" id="logout-form" method="post">
-                    @csrf
-                </form>
-            </li>
-        </ul>
     </section>
 
     {{-- Content --}}
@@ -107,7 +90,49 @@
 		{{-- Navbar --}}
 		<nav class="nav">
 			<i class='bx bx-menu'></i>
-            <span>Selamat Datang di Administrator Panel!</span>
+            <div class="d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="name">{{ Auth::user()->name }}</span>
+                <i class='bx bxs-user-circle'></i>
+                <ul class="dropdown-menu dropdown-menu-end" style="font-size: 14px;">
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <a href="{{ route('data-profil') }}" class="d-flex align-items-center">
+                                <i class='bx bxs-user-circle'></i>
+                                <span class="dropdown-span">Profil</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <a href="{{ route('data-pengaturan') }}" class="d-flex align-items-center">
+                                <i class='bx bxs-cog'></i>
+                                <span class="dropdown-span">Pengaturan</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout d-flex align-items-center">
+                                <i class='bx bxs-log-out-circle'></i>
+                                <span class="dropdown-span">Logout</span>
+                            </a>
+                            <form action="{{ route('admin.logout') }}" id="logout-form" method="post">
+                                @csrf
+                            </form>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            {{-- <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Right-aligned menu example
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div> --}}
         </nav>
 
         {{-- Main --}}
@@ -122,6 +147,8 @@
     <script src="{!! asset('js/adminpanel.js') !!}"></script>
     {{-- DataTables --}}
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    {{-- Ajax for Database --}}
+    @yield('js_konten')
 </body>
 </html>
 

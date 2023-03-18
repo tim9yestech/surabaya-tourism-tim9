@@ -175,10 +175,6 @@ body {
     transition: width 0.3s ease;
 }
 
-#side-bar .side-menu li a.logout {
-    color: var(--yellow);
-}
-
 #side-bar .side-menu.top li a:hover {
     color: var(--black);
 }
@@ -244,9 +240,22 @@ body {
     border-radius: 6px;
 }
 
-#content nav span {
+#content nav .name {
     font-weight: 600;
     font-style: italic;
+    padding-right: 10px;
+}
+
+#content nav .dropdown-span {
+    padding-left: 10px;
+}
+
+#content nav li a.logout {
+    color: var(--red);
+}
+
+#content nav li a.logout:hover {
+    color: #af332e;
 }
 
 /* Main */

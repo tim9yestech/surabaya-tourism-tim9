@@ -37,10 +37,12 @@
                                 <td class="text-center text-capitalize">{{ $row->role }}</td>
                                 <td>{{ $row->email }}</td>
                                 <td class="text-center">      
-                                    <a class="btn btn-sm btn-warning" type="button" href="{{ route('edit-admin', $row->id) }}">
+                                    <button class="btn btn-sm btn-warning btn-edit" type="button" data-admin-id="{{ $row->id }}" data-bs-toggle="modal" data-bs-target="#modal-edit">
                                         <i class="fa fa-wrench"></i>
-                                    </a>            
-                                    <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}"><i class="fa fa-trash"></i></a>
+                                    </button>            
+                                    <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
                             <?php $no++; ?>
@@ -90,38 +92,65 @@
     </div>
 </div>
 
-{{-- Edit Data
+ {{-- Edit Data --}}
 <div class="modal fade" id="modal-edit" tabindex="-1" aria-labelledby="modal-edit" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" id="modal-dialog" style="max-width: 400px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title fw-bold text-uppercase">Tambah Admin</h4>
+                <h4 class="modal-title fw-bold text-uppercase">Edit Admin</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body"> --}}
+            <div class="modal-body">
                 {{-- Form Edit Data Admin --}}
-                {{-- <form class="form-create" action="{{ route('edit-admin', $data->id) }}" method="POST" enctype="multipart/form-data">
+                <form class="form-create" id="form-edit" method="POST" enctype="multipart/form-data">
                     @csrf
                     <label for="name" class="form-label">Nama Admin</label>
-                    <input type="text" name="name" id="name" class="form-control" value="{{ $data->name }}">
-    
+                    <input type="text" name="name" id="name_edit" class="form-control">
+
                     <label for="role" class="form-label">Role</label>
-                    <select name="role" id="role" class="form-control" value="{{ $data->role }}">
+                    <select name="role" id="role_edit" class="form-control">
                         <option>--Pilih Role--</option>
                         <option value="admin">Admin</option>
                         <option value="contributor">Contributor</option>
                     </select>
-    
+
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" value="{{ $data->email }}">
-    
-                    <button type="submit" class="btn text-uppercase" style="background: #6868ac; color: #fff">Submit</button>
+                    <input type="email" name="email" id="email_edit" class="form-control">
+
+                    <button type="submit" class="btn text-uppercase"
+                        style="background: #6868ac; color: #fff">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-</div> --}}
+</div>
+@endsection
 
+{{-- Mengambil fetch data, set value, set route dengan Ajax --}}
+@section('js_konten')
+    <script>
+        $(function() {
+            $('.btn-edit').click(function() {
+                const id = $(this).data('admin-id')
+                console.log('id', id)
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                    }
+                });
+                $.ajax({
+                    url: "{{ route('data-admin') }}" + '/' + id,
+                    success: function(data) {
+                        $('#name_edit').val(data.data.name)
+                        $('#email_edit').val(data.data.email)
+                        $('#role_edit').val(data.data.role)
+                        const url = "{{ route('data-admin') }}" + '/edit/' + id
+                        $('#form-edit').attr('action', url)
+                    }
+                });
+            })
+        });
+    </script>
 @endsection
