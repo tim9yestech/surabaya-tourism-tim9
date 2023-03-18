@@ -115,8 +115,12 @@ Route::group([
             Route::post('/data-wilayah/edit/{id}','WilayahController@updatewilayah')->name('update-wilayah')->middleware('can:role,"admin"');
             Route::get('/data-wilayah/hapus/{id}','WilayahController@hapuswilayah')->name('hapus-wilayah')->middleware('can:role,"admin"');
 
-            // KELOLA DATA WILAYAH
-            Route::get('/data-destinasi','DestinasiController@index',["headtitle" => "Data Destinasi"])->name('data-destinasi')->middleware('can:role,"admin","contributor"');
+            // KELOLA DATA DESTINASI
+            Route::get('/data-destinasi','DestinasiController@index',["headtitle" => "Data Destinasi Wisata"])->name('data-destinasi')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-destinasi/{id}','DestinasiController@getById')->name('get-destinasi')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-destinasi/tambah','DestinasiController@tambahdestinasi')->name('tambah-destinasi')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-destinasi/edit/{id}','DestinasiController@updatedestinasi')->name('update-destinasi')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-destinasi/hapus/{id}','DestinasiController@hapusdestinasi')->name('hapus-destinasi')->middleware('can:role,"admin"');
             Route::get('/data-kategori-destinasi','KategoriDestinasiController@index',["headtitle" => "Data Kategori Destinasi"])->name('data-kategori-destinasi')->middleware('can:role,"admin","contributor"');
         });
 });

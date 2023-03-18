@@ -74,6 +74,11 @@
                     <span>Data Produk UMKM</span>
                 </a>
             </li>
+            <li class="{{ ($headtitle === "Data Kategori Destinasi") ? 'active' : '' }}">
+                <a href="{{ route('data-kategori-destinasi') }}">
+                    <span style="padding-left: 40px;">Kategori Produk UMKM</span>
+                </a>
+            </li>
             @can('role','admin')
             <li class="{{ ($headtitle === "Data Ulasan") ? 'active' : '' }}">
                 <a href="{{ route('data-ulasan') }}">
@@ -123,16 +128,6 @@
                     </li>
                 </ul>
             </div>
-            {{-- <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  Right-aligned menu example
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><button class="dropdown-item" type="button">Action</button></li>
-                  <li><button class="dropdown-item" type="button">Another action</button></li>
-                  <li><button class="dropdown-item" type="button">Something else here</button></li>
-                </ul>
-              </div> --}}
         </nav>
 
         {{-- Main --}}

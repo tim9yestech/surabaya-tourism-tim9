@@ -2,86 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Wilayah;
 use App\Models\Destinasi;
 use Illuminate\Http\Request;
 
 class DestinasiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        // $data = Admin::all();
-        $headtitle = "Data Destinasi";
-        return view('admin.data-destinasi',compact('headtitle'));
+        $data = Destinasi::all();
+        $wilayah = Wilayah::all();
+        $headtitle = "Data Destinasi Wisata";
+        return view('admin.data-destinasi',compact('data','wilayah','headtitle'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function getByid($id)
     {
-        //
+        $data = Destinasi::find($id);
+        return response()->json([
+            'data' => $data,
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function tambahdestinasi(Request $request){
+        Destinasi::create($request->all());
+        return redirect()->route('data-destinasi')->with('success','Data berhasil ditambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Destinasi  $destinasi
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Destinasi $destinasi)
-    {
-        //
+    public function updatedestinasi(Request $request, $id){
+        $data = Destinasi::find($id);
+        $data->update($request->all());
+        return redirect()->route('data-destinasi');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Destinasi  $destinasi
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Destinasi $destinasi)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Destinasi  $destinasi
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Destinasi $destinasi)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Destinasi  $destinasi
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Destinasi $destinasi)
-    {
-        //
+    public function hapusdestinasi($id){
+        $data = Destinasi::find($id);
+        $data->delete();
+        return redirect()->route('data-destinasi');
     }
 }

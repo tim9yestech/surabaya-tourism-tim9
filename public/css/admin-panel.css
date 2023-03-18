@@ -291,7 +291,8 @@ body {
 }
 
 #content main .form-create input,
-#content main .form-create select {
+#content main .form-create select,
+#content main .form-create textarea {
     font-size: 13px;
     margin-bottom: 20px;
 }
