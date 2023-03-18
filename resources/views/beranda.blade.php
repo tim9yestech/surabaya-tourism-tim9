@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surabaya Tourism</title>
+    <link rel="shortcut icon" href="{{ asset('assets/img/Logo-Surabaya.png') }}">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -192,7 +193,7 @@
                     <div class="col-md-6 mb-2">
                         <div class="row">
                             <div class="col-md-12 my-4">
-                                <a href="#" class="text-dark w-100">
+                                <a href="/destinasi" class="text-dark w-100">
                                     <div class="card card-img"
                                         style="box-shadow: none; border: none; border-radius: 20px;">
                                         <div class="img-hover-zoom--slowmo">
@@ -213,7 +214,7 @@
                                 </a>
                             </div>
                             <div class="col-md-12 my-4">
-                                <a href="#" class="text-dark" w-100>
+                                <a href=/destinasi" class="text-dark" w-100>
                                     <div class="card card-img"
                                         style="box-shadow: none; border: none; border-radius: 20px;">
                                         <div class="img-hover-zoom--slowmo">
@@ -241,7 +242,7 @@
                     <div class="col-md-6 mb-2">
                         <div class="row">
                             <div class="col-md-12 my-4">
-                                <a href="#" class="text-dark" w-100>
+                                <a href="/destinasi" class="text-dark" w-100>
                                     <div class="card card-img"
                                         style="box-shadow: none; border: none; border-radius: 20px;">
                                         <div class="img-hover-zoom--slowmo">
@@ -262,7 +263,7 @@
                                 </a>
                             </div>
                             <div class="col-md-12 my-4">
-                                <a href="#" class="text-dark w-100">
+                                <a href="/destinasi" class="text-dark w-100">
                                     <div class="card card-img"
                                         style="box-shadow: none; border: none; border-radius: 20px;">
                                         <div class="img-hover-zoom--slowmo">
