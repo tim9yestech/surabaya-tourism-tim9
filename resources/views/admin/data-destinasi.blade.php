@@ -23,6 +23,7 @@
                             <tr>
                                 <th class="text-center" width="1%">No</th>
                                 <th class="text-center">Nama Destinasi</th>
+                                <th class="text-center">Kategori</th>
                                 <th class="text-center">Alamat</th>                
                                 <th class="text-center">Wilayah</th>
                                 <th class="text-center">Dibuat</th>
@@ -36,6 +37,11 @@
                             <tr>
                                 <td class="text-center">{{ $no }}</td>
                                 <td class="text-capitalize">{{ $row->nama }}</td>
+                                <td>
+                                    @foreach($row->categories as $category)
+                                        <p>{{  $category->kategori }}</p>
+                                    @endforeach
+                                </td>
                                 <td>{{ $row->alamat }}</td>
                                 <td class="text-capitalize">{{ $row->wilayah->nama_wilayah }}</td>
                                 <td class="text-center">{{ $row->created_at->diffForHumans() }}</td>
@@ -73,8 +79,16 @@
                 {{-- Form Tambah Destinasi --}}
                 <form class="form-create" action="{{ route('tambah-destinasi') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <label for="nama" class="form-label">Nama Destinasi</label>
+                    <label for="nama" class="form-label">Nama Destinasi<//label>
                     <input type="text" name="nama" id="nama" class="form-control">
+
+                    <label for="kategori" class="form-label">Wilayah</label>
+                    <select name="kategori" id="kategori" class="form-control js-example-basic-multiple-limit">
+                        <option>--Pilih Wilayah--</option>
+                        @foreach ($wilayah as $menu)
+                        <option value="{{ $menu->id }}">{{ $menu->nama_wilayah }}</option>
+                        @endforeach
+                    </select>
 
                     <label for="alamat" class="form-label">Alamat Destinasi</label>
                     <input type="text" name="alamat" id="alamat" class="form-control">
