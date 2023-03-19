@@ -14,8 +14,9 @@ class DestinasiController extends Controller
     {
         $data = Destinasi::all();
         $wilayah = Wilayah::all();
+        $kategori = Kategori_Destinasi::all();
         $headtitle = "Data Destinasi Wisata";
-        return view('admin.data-destinasi',compact('data','wilayah','headtitle'));
+        return view('admin.data-destinasi',compact('data','wilayah','kategori','headtitle'));
     }
 
     public function getByid($id)
