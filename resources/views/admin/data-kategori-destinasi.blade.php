@@ -6,7 +6,7 @@
 <div class="container">
     <h2 class="mb-4">{{ $headtitle }}</h2>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <input class="form-control light-table-filter" data-table="table-hover" type="search" aria-invalid="false" placeholder="Cari administrator">
+        <input class="form-control light-table-filter" data-table="table-hover" type="search" aria-invalid="false" placeholder="Cari kategori">
         <div class="btn-toolbar mb-2 mb-md-0">
             <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-create">
                 <i class="fa fa-plus"></i> Tambah Data
@@ -22,9 +22,7 @@
                         <thead style="font-size: 14px;">
                             <tr>
                                 <th class="text-center" width="1%">No</th>
-                                <th class="text-center" width="25%">Nama</th>
-                                <th class="text-center">Role</th>                
-                                <th class="text-center">Email</th>   
+                                <th class="text-center">Kategori</th>
                                 <th colspan=3 class="text-center">Aksi</th>
                             </tr>
                         </thead>
@@ -33,14 +31,12 @@
                             @foreach ($data as $row)
                             <tr>
                                 <td class="text-center">{{ $no }}</td>
-                                <td>{{ $row->name }}</td>
-                                <td class="text-center text-capitalize">{{ $row->role }}</td>
-                                <td>{{ $row->email }}</td>
+                                <td>{{ $row->kategori }}</td>
                                 <td class="text-center">      
-                                    <button class="btn btn-sm btn-warning btn-edit" type="button" data-admin-id="{{ $row->id }}" data-bs-toggle="modal" data-bs-target="#modal-edit">
+                                    <button class="btn btn-sm btn-warning btn-edit" type="button" data-kategoridestinasi-id="{{ $row->id }}" data-bs-toggle="modal" data-bs-target="#modal-edit">
                                         <i class="fa fa-wrench"></i>
                                     </button>            
-                                    <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}">
+                                    <a class="btn btn-sm btn-danger" href="{{ route('hapus-kategoridestinasi', $row->id) }}">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
@@ -60,31 +56,18 @@
     <div class="modal-dialog modal-dialog-centered" id="modal-dialog" style="max-width: 400px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title fw-bold text-uppercase">Tambah Admin</h4>
+                <h4 class="modal-title fw-bold text-uppercase">Tambah Kategori</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                {{-- Form Tambah Admin --}}
-                <form class="form-create" action="{{ route('tambah-admin') }}" method="POST" enctype="multipart/form-data">
+                {{-- Form Tambah Kategori Destinasi --}}
+                <form class="form-create" action="{{ route('tambah-kategoridestinasi') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <label for="name" class="form-label">Nama Admin</label>
-                    <input type="text" name="name" id="name" class="form-control">
-    
-                    <label for="role" class="form-label">Role</label>
-                    <select name="role" id="role" class="form-control">
-                        <option>--Pilih Role--</option>
-                        <option value="admin">Admin</option>
-                        <option value="contributor">Contributor</option>
-                    </select>
-    
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email" class="form-control">
-    
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" name="password" id="password" class="form-control">
-    
+                    <label for="kategori" class="form-label">Nama Kategori</label>
+                    <input type="text" name="kategori" id="kategori" class="form-control">
+   
                     <button type="submit" class="btn text-uppercase" style="background: #6868ac; color: #fff">Submit</button>
                 </form>
             </div>
@@ -97,27 +80,17 @@
     <div class="modal-dialog modal-dialog-centered" id="modal-dialog" style="max-width: 400px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title fw-bold text-uppercase">Edit Admin</h4>
+                <h4 class="modal-title fw-bold text-uppercase">Edit Kategori</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                {{-- Form Edit Data Admin --}}
+                {{-- Form Edit Data Kategori Destinasi --}}
                 <form class="form-create" id="form-edit" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <label for="name" class="form-label">Nama Admin</label>
-                    <input type="text" name="name" id="name_edit" class="form-control">
-
-                    <label for="role" class="form-label">Role</label>
-                    <select name="role" id="role_edit" class="form-control">
-                        <option>--Pilih Role--</option>
-                        <option value="admin">Admin</option>
-                        <option value="contributor">Contributor</option>
-                    </select>
-
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email_edit" class="form-control">
+                    <label for="kategori" class="form-label">Nama Kategori</label>
+                    <input type="text" name="kategori" id="kategori_edit" class="form-control">
 
                     <button type="submit" class="btn text-uppercase"
                         style="background: #6868ac; color: #fff">Submit</button>
@@ -133,7 +106,7 @@
     <script>
         $(function() {
             $('.btn-edit').click(function() {
-                const id = $(this).data('admin-id')
+                const id = $(this).data('kategoridestinasi-id')
                 console.log('id', id)
                 $.ajaxSetup({
                     headers: {
@@ -141,12 +114,10 @@
                     }
                 });
                 $.ajax({
-                    url: "{{ route('data-admin') }}" + '/' + id,
+                    url: "{{ route('data-kategoridestinasi') }}" + '/' + id,
                     success: function(data) {
-                        $('#name_edit').val(data.data.name)
-                        $('#email_edit').val(data.data.email)
-                        $('#role_edit').val(data.data.role)
-                        const url = "{{ route('data-admin') }}" + '/edit/' + id
+                        $('#kategori_edit').val(data.data.kategori)
+                        const url = "{{ route('data-kategoridestinasi') }}" + '/edit/' + id
                         $('#form-edit').attr('action', url)
                     }
                 });

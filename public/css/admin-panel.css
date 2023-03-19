@@ -259,6 +259,10 @@ body {
 }
 
 /* Main */
+#content .bg-card {
+    background-color: #0c0c0c70;
+}
+
 #content main {
     width: 100%;
     padding: 36px 24px;

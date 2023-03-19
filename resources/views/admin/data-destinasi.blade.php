@@ -101,7 +101,12 @@
 
                     <label for="jam_operasional" class="form-label">Jam Operasional</label>
                     <input type="text" name="jam_operasional" id="jam_operasional" class="form-control">
-    
+
+                    <div class="mb-3">
+                        <label for="gambar" class="form-label">Gambar Destinasi</label>
+                        <input type="file" name="gambar" id="gambar" class="form-control" multiple>
+                    </div>
+
                     <button type="submit" class="btn text-uppercase" style="background: #6868ac; color: #fff">Submit</button>
                 </form>
             </div>
@@ -152,6 +157,11 @@
                     <label for="jam_operasional" class="form-label">Jam Operasional</label>
                     <input type="text" name="jam_operasional" id="jam_operasional_edit" class="form-control">
 
+                    <div class="mb-3">
+                        <label for="gambar" class="form-label">Gambar Destinasi</label>
+                        <input type="file" name="gambar" id="gambar_edit" class="form-control" multiple>
+                    </div>
+
                     <button type="submit" class="btn text-uppercase"
                         style="background: #6868ac; color: #fff">Submit</button>
                 </form>
@@ -184,6 +194,7 @@
                         $('#link_reservasi_edit').val(data.data.link_reservasi)
                         $('#hari_operasional_edit').val(data.data.hari_operasional)
                         $('#jam_operasional_edit').val(data.data.jam_operasional)
+                        $('#gambar_edit').val(data.data.gambar)
                         const url = "{{ route('data-destinasi') }}" + '/edit/' + id
                         $('#form-edit').attr('action', url)
                     }

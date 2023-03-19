@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li class="{{ ($headtitle === "Data Kategori Destinasi") ? 'active' : '' }}">
-                <a href="{{ route('data-kategori-destinasi') }}">
+                <a href="{{ route('data-kategoridestinasi') }}">
                     <span style="padding-left: 40px;">Kategori Destinasi</span>
                 </a>
             </li>
@@ -74,8 +74,8 @@
                     <span>Data Produk UMKM</span>
                 </a>
             </li>
-            <li class="{{ ($headtitle === "Data Kategori Destinasi") ? 'active' : '' }}">
-                <a href="{{ route('data-kategori-destinasi') }}">
+            <li class="">
+                <a href="">
                     <span style="padding-left: 40px;">Kategori Produk UMKM</span>
                 </a>
             </li>

@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Wilayah;
 use App\Models\Destinasi;
+use App\Models\Kategori_Destinasi;
 use Illuminate\Http\Request;
 
 class DestinasiController extends Controller
 {
+    // DESTINASI
     public function index()
     {
         $data = Destinasi::all();
@@ -39,5 +41,38 @@ class DestinasiController extends Controller
         $data = Destinasi::find($id);
         $data->delete();
         return redirect()->route('data-destinasi');
+    }
+
+    // KATEGORI DESTINASI
+    public function kategoridestinasi()
+    {
+        $data = Kategori_Destinasi::all();
+        $headtitle = "Data Kategori Destinasi";
+        return view('admin.data-kategori-destinasi',compact('data','headtitle'));
+    }
+
+    public function kdgetByid($id)
+    {
+        $data = Kategori_Destinasi::find($id);
+        return response()->json([
+            'data' => $data,
+        ]);
+    }
+
+    public function tambahkategoridestinasi(Request $request){
+        Kategori_Destinasi::create($request->all());
+        return redirect()->route('data-kategoridestinasi')->with('success','Data berhasil ditambahkan');
+    }
+
+    public function updatekategoridestinasi(Request $request, $id){
+        $data = Kategori_Destinasi::find($id);
+        $data->update($request->all());
+        return redirect()->route('data-kategoridestinasi');
+    }
+
+    public function hapuskategoridestinasi($id){
+        $data = Kategori_Destinasi::find($id);
+        $data->delete();
+        return redirect()->route('data-kategoridestinasi');
     }
 }

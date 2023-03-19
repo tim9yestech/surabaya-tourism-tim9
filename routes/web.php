@@ -103,16 +103,12 @@ Route::group([
             Route::post('/data-admin/tambah','AdminController@tambahadmin')->name('tambah-admin')->middleware('can:role,"admin"');
             Route::post('/data-admin/edit/{id}','AdminController@updateadmin')->name('update-admin')->middleware('can:role,"admin"');
             Route::get('/data-admin/hapus/{id}','AdminController@hapusadmin')->name('hapus-admin')->middleware('can:role,"admin"');
-
-            // KELOLA DATA KATEGORI DESTINASI
-            Route::get('/data-kategori-destinasi','AdminController@index',["headtitle" => "Data Kategori Desinatasi"])->name('data-kategori-destinasi')->middleware('can:role,"admin","contributor"');
             
             // KELOLA DATA WILAYAH
             Route::get('/data-wilayah','WilayahController@index',["headtitle" => "Data Wilayah"])->name('data-wilayah')->middleware('can:role,"admin","contributor"');
-            Route::get('/data-wilayah/tambah','WilayahController@tambahwilayah')->name('tambah-wilayah')->middleware('can:role,"admin","contributor"');
-            Route::post('/data-wilayah/tambah','WilayahController@insertwilayah')->name('insert-wilayah')->middleware('can:role,"admin","contributor"');
-            Route::get('/data-wilayah/edit/{id}','WilayahController@editwilayah')->name('edit-wilayah')->middleware('can:role,"admin"');
-            Route::post('/data-wilayah/edit/{id}','WilayahController@updatewilayah')->name('update-wilayah')->middleware('can:role,"admin"');
+            Route::get('/data-wilayah/{id}','WilayahController@getById')->name('get-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-wilayah/tambah','WilayahController@tambahwilayah')->name('tambah-wilayah')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-wilayah/edit/{id}','WilayahController@updatewilayah')->name('update-wilayah')->middleware('can:role,"admin","contributor"');
             Route::get('/data-wilayah/hapus/{id}','WilayahController@hapuswilayah')->name('hapus-wilayah')->middleware('can:role,"admin"');
 
             // KELOLA DATA DESTINASI
@@ -121,7 +117,23 @@ Route::group([
             Route::post('/data-destinasi/tambah','DestinasiController@tambahdestinasi')->name('tambah-destinasi')->middleware('can:role,"admin","contributor"');
             Route::post('/data-destinasi/edit/{id}','DestinasiController@updatedestinasi')->name('update-destinasi')->middleware('can:role,"admin","contributor"');
             Route::get('/data-destinasi/hapus/{id}','DestinasiController@hapusdestinasi')->name('hapus-destinasi')->middleware('can:role,"admin"');
-            Route::get('/data-kategori-destinasi','KategoriDestinasiController@index',["headtitle" => "Data Kategori Destinasi"])->name('data-kategori-destinasi')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-kategoridestinasi','DestinasiController@kategoridestinasi',["headtitle" => "Data Kategori Destinasi"])->name('data-kategoridestinasi')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-kategoridestinasi/{id}','DestinasiController@kdgetById')->name('get-kategoridestinasi')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-kategoridestinasi/tambah','DestinasiController@tambahkategoridestinasi')->name('tambah-kategoridestinasi')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-kategoridestinasi/edit/{id}','DestinasiController@updatekategoridestinasi')->name('update-kategoridestinasi')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-kategoridestinasi/hapus/{id}','DestinasiController@hapuskategoridestinasi')->name('hapus-kategoridestinasi')->middleware('can:role,"admin"');
+            
+            // KELOLA DATA PRODUK UMKM
+            Route::get('/data-produk-umkm','ProdukUMKMController@index',["headtitle" => "Data Produk UMKM"])->name('data-produk-umkm')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-produk-umkm/{id}','ProdukUMKMController@getById')->name('get-produk-umkm')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-produk-umkm/tambah','ProdukUMKMController@tambahproduk')->name('tambah-produk-umkm')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-produk-umkm/edit/{id}','ProdukUMKMController@updateproduk')->name('update-produk-umkm')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-produk-umkm/hapus/{id}','ProdukUMKMController@hapusproduk')->name('hapus-produk-umkm')->middleware('can:role,"admin"');
+            Route::get('/data-kategoriproduk-umkm','ProdukUMKMController@kategoriproduk',["headtitle" => "Data Kategori Produk UMKM"])->name('data-kategoriproduk')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-kategoriproduk-umkm/{id}','ProdukUMKMController@kpgetById')->name('get-kategoriproduk')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-kategoriproduk-umkm/tambah','ProdukUMKMController@tambahkategoriproduk')->name('tambah-kategoriproduk')->middleware('can:role,"admin","contributor"');
+            Route::post('/data-kategoriproduk-umkm/edit/{id}','ProdukUMKMController@updatekategoriproduk')->name('update-kategoriproduk')->middleware('can:role,"admin","contributor"');
+            Route::get('/data-kategoriproduk-umkm/hapus/{id}','ProdukUMKMController@hapuskategoriproduk')->name('hapus-kategoriproduk')->middleware('can:role,"admin"');
         });
 });
 
