@@ -82,13 +82,13 @@
                     <label for="nama" class="form-label">Nama Destinasi<//label>
                     <input type="text" name="nama" id="nama" class="form-control">
 
-                    {{-- <label for="kategori" class="form-label">Kategori</label>
-                    <select name="kategori" id="kategori" class="form-control js-example-basic-multiple-limit">
+                    <label for="kategori" class="form-label">Kategori</label>
+                    <select name="states[]" id="kategori" class="form-control js-example-basic-multiple-limit" multiple="multiple">
                         <option>--Pilih Kategori--</option>
                         @foreach ($kategori as $menu)
                         <option value="{{ $menu->id }}">{{ $menu->kategori }}</option>
                         @endforeach
-                    </select> --}}
+                    </select>
 
                     <label for="alamat" class="form-label">Alamat Destinasi</label>
                     <input type="text" name="alamat" id="alamat" class="form-control">
