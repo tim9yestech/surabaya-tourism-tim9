@@ -91,7 +91,7 @@ Route::group([
 
         Route::middleware(['auth:admin'])->group(function () {
             Route::post('logout','LoginAdminController@logout')->name('admin.logout');
-            Route::view('/','admin.dashboard',["headtitle" => "Dashboard"])->name('admin.dashboard');
+            Route::get('/','DashboardController@count',["headtitle" => "Dashboard"])->name('admin.dashboard');
             Route::view('/data-produk-umkm','admin.data-produk-umkm',["headtitle" => "Data Produk UMKM"])->name('data-produk-umkm')->middleware('can:role,"admin","contributor"');
             Route::view('/data-ulasan','admin.data-ulasan',["headtitle" => "Data Ulasan"])->name('data-ulasan')->middleware('can:role,"admin","contributor"');
             Route::view('/profil','admin.profil',["headtitle" => "Profil Admin"])->name('data-profil')->middleware('can:role,"admin","contributor"');

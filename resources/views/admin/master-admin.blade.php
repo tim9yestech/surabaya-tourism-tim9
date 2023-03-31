@@ -17,8 +17,8 @@
     {{-- Ajax --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     {{-- Select Multiple --}}
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,12 +146,6 @@
     {{-- DataTables --}}
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
     {{-- Ajax for Database --}}
-    {{-- Select 2 --}}
-    <script>
-        $(".js-example-basic-multiple-limit").select2({
-            maximumSelectionLength: 10
-        });
-    </script>
     @yield('js_konten')
 </body>
 </html>

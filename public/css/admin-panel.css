@@ -259,8 +259,39 @@ body {
 }
 
 /* Main */
-#content .bg-card {
-    background-color: #0c0c0c70;
+/* Dashboard ~ count board */
+#content .card-board {
+    border: 0.5px solid #00000010;
+    color: #b3b3b3;
+}
+
+#content .card-board .card-body {
+    margin-left: 10px;
+}
+
+#content .card-board .count {
+    color: #535392;
+}
+
+/* Dashboard ~ chart */
+#content .chart h6 {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#content .chart canvas {
+    max-height: 250px;
+    padding-left: 30px;
+}
+
+#destinasiChart {
+    width: 600px;
+    padding-right: 30px;
+}
+
+#produkChart {
+    width: 310px;
+    margin-right: 50px;
 }
 
 #content main {

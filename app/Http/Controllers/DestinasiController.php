@@ -28,7 +28,8 @@ class DestinasiController extends Controller
     }
 
     public function tambahdestinasi(Request $request){
-        Destinasi::create($request->all());
+        $destinasi = Destinasi::create($request->all());
+        $destinasi->categories()->attach($request->input('id_kategori'));
         return redirect()->route('data-destinasi')->with('success','Data berhasil ditambahkan');
     }
 

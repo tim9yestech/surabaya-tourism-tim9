@@ -82,13 +82,12 @@
                     <label for="nama" class="form-label">Nama Destinasi<//label>
                     <input type="text" name="nama" id="nama" class="form-control">
 
-                    <label for="kategori" class="form-label">Kategori</label>
-                    <select name="states[]" id="kategori" class="form-control js-example-basic-multiple-limit" multiple="multiple">
-                        <option>--Pilih Kategori--</option>
+                    <label for="categories" class="form-label">Kategori</label><br>
+                    <select name="categories" id="id_kategori[]" multiple>
                         @foreach ($kategori as $menu)
                         <option value="{{ $menu->id }}">{{ $menu->kategori }}</option>
                         @endforeach
-                    </select>
+                    </select><br>
 
                     <label for="alamat" class="form-label">Alamat Destinasi</label>
                     <input type="text" name="alamat" id="alamat" class="form-control">
@@ -215,5 +214,9 @@
                 });
             })
         });
+    </script>
+    {{-- Select 2 --}}
+    <script>
+        new MultiSelectTag('id_kategori[]')
     </script>
 @endsection
