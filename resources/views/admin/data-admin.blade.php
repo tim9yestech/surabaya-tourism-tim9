@@ -5,8 +5,7 @@
 @section('isi_konten')
 <div class="container">
     <h2 class="mb-4">{{ $headtitle }}</h2>
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <input class="form-control light-table-filter" data-table="table-hover" type="search" aria-invalid="false" placeholder="Cari administrator">
+    <div class="d-flex justify-content-end mb-2">
         <div class="btn-toolbar mb-2 mb-md-0">
             <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-create">
                 <i class="fa fa-plus"></i> Tambah Data
@@ -15,42 +14,38 @@
     </div>
 
     <div class="card">
-        <div class="card-body">
-            <div class="scroll">
-                <div class="table-responsive">             
-                    <table class="table table-bordered" id="tableku">
-                        <thead style="font-size: 14px;">
-                            <tr>
-                                <th class="text-center" width="1%">No</th>
-                                <th class="text-center" width="25%">Nama</th>
-                                <th class="text-center">Role</th>                
-                                <th class="text-center">Email</th>   
-                                <th colspan=3 class="text-center">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody style="font-size: 13px;">
-                            <?php $no=1; ?>
-                            @foreach ($data as $row)
-                            <tr>
-                                <td class="text-center">{{ $no }}</td>
-                                <td>{{ $row->name }}</td>
-                                <td class="text-center text-capitalize">{{ $row->role }}</td>
-                                <td>{{ $row->email }}</td>
-                                <td class="text-center">      
-                                    <button class="btn btn-sm btn-warning btn-edit" type="button" data-admin-id="{{ $row->id }}" data-bs-toggle="modal" data-bs-target="#modal-edit">
-                                        <i class="fa fa-wrench"></i>
-                                    </button>            
-                                    <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <?php $no++; ?>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="card-body horizontal-scrollable">             
+            <table id="example" class="table table-striped" style="width:100%">
+                <thead style="font-size: 14px;">
+                    <tr>
+                        <th class="text-center" width="1%">No</th>
+                        <th class="text-center" width="25%">Nama</th>
+                        <th class="text-center">Role</th>                
+                        <th class="text-center">Email</th>   
+                        <th class="text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size: 13px;">
+                    <?php $no=1; ?>
+                    @foreach ($data as $row)
+                    <tr>
+                        <td class="text-center">{{ $no }}</td>
+                        <td>{{ $row->name }}</td>
+                        <td class="text-center text-capitalize">{{ $row->role }}</td>
+                        <td>{{ $row->email }}</td>
+                        <td class="text-center">      
+                            <button class="btn btn-sm btn-warning btn-edit" type="button" data-admin-id="{{ $row->id }}" data-bs-toggle="modal" data-bs-target="#modal-edit">
+                                <i class="fa fa-wrench"></i>
+                            </button>            
+                            <a class="btn btn-sm btn-danger" href="{{ route('hapus-admin', $row->id) }}">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php $no++; ?>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

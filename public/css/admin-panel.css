@@ -342,9 +342,21 @@ body {
     margin-right: (100% - 680px) / 2;
 }
 
-.scroll {
-    height: 350px;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll;
+.horizontal-scrollable {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#example_wrapper .row,
+#example_wrapper a {
+    font-size: 13px !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 4rem !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding-left: 0.2em !important;
+    padding-right: 0.2em !important;
 }
