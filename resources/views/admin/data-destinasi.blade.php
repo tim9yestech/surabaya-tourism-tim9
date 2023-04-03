@@ -140,7 +140,7 @@
                     <input type="text" name="nama" id="nama_edit" class="form-control">
 
                     <label for="id_ketegori" class="form-label">Kategori</label><br>
-                    <select name="id_kategori[]" id="id_kategori_edit" multiple>
+                    <select name="id_kategori" id="id_kategori_edit" multiple>
                         @foreach ($kategori as $menu)
                         <option value="{{ $menu->id }}">{{ $menu->kategori }}</option>
                         @endforeach
@@ -202,7 +202,7 @@
                     url: "{{ route('data-destinasi') }}" + '/' + id,
                     success: function(data) {
                         $('#nama_edit').val(data.data.nama)
-                        $('#id_kategori_edit').val(data.data.id_kategori[])
+                        $('#id_kategori_edit').val(data.data.id_kategori)
                         $('#alamat_edit').val(data.data.alamat)
                         $('#id_wilayah_edit').val(data.data.id_wilayah)
                         $('#deskripsi_edit').val(data.data.deskripsi)
@@ -220,6 +220,7 @@
     </script>
     {{-- Select 2 --}}
     <script>
-        new MultiSelectTag('id_kategori','id_kategori_edit')
+        new MultiSelectTag('id_kategori')
+        new MultiSelectTag('id_kategori_edit')
     </script>
 @endsection

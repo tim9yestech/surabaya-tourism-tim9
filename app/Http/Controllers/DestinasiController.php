@@ -36,6 +36,8 @@ class DestinasiController extends Controller
     public function updatedestinasi(Request $request, $id){
         $data = Destinasi::find($id);
         $data->update($request->all());
+        $data->categories()->update(['id_kategori' => $request->id_kategori]);
+        // $data->categories()->attach($request->input('id_kategori'));
         return redirect()->route('data-destinasi');
     }
 
