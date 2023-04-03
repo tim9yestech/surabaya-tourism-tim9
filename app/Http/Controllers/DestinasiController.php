@@ -22,6 +22,11 @@ class DestinasiController extends Controller
     public function getByid($id)
     {
         $data = Destinasi::find($id);
+        $categories = $data->categories;
+        foreach ($categories as $category) {
+            $new_category[] = $category->id;
+        }
+        $data->kategori = $new_category;
         return response()->json([
             'data' => $data,
         ]);

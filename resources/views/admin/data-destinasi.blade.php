@@ -78,7 +78,7 @@
                     <input type="text" name="nama" id="nama" class="form-control">
 
                     <label for="id_ketegori" class="form-label">Kategori</label><br>
-                    <select name="id_kategori[]" id="id_kategori" multiple>
+                    <select name="id_kategori[]" id="id_kategori" class="select2" multiple="multiple">
                         @foreach ($kategori as $menu)
                         <option value="{{ $menu->id }}">{{ $menu->kategori }}</option>
                         @endforeach
@@ -140,7 +140,7 @@
                     <input type="text" name="nama" id="nama_edit" class="form-control">
 
                     <label for="id_ketegori" class="form-label">Kategori</label><br>
-                    <select name="id_kategori[]" id="id_kategori_edit" multiple>
+                    <select name="id_kategori[]" class="select2" id="id_kategori_edit" multiple="multiple">
                         @foreach ($kategori as $menu)
                         <option value="{{ $menu->id }}">{{ $menu->kategori }}</option>
                         @endforeach
@@ -188,8 +188,12 @@
 
 {{-- Mengambil fetch data, set value, set route dengan Ajax --}}
 @section('js_konten')
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
     <script>
         $(function() {
+            
+            $('.select2').select2();
             $('.btn-edit').click(function() {
                 const id = $(this).data('destinasi-id')
                 console.log('id', id)
@@ -202,7 +206,8 @@
                     url: "{{ route('data-destinasi') }}" + '/' + id,
                     success: function(data) {
                         $('#nama_edit').val(data.data.nama)
-                        $('#id_kategori_edit').val(data.data.id_kategori[])
+                        console.log(data.data.kategori);
+                        $('#id_kategori_edit').select2().val(data.data.kategori).change()
                         $('#alamat_edit').val(data.data.alamat)
                         $('#id_wilayah_edit').val(data.data.id_wilayah)
                         $('#deskripsi_edit').val(data.data.deskripsi)
@@ -220,6 +225,7 @@
     </script>
     {{-- Select 2 --}}
     <script>
-        new MultiSelectTag('id_kategori','id_kategori_edit')
+        // new MultiSelectTag('id_kategori')
+        // new MultiSelectTag('id_kategori_edit')
     </script>
 @endsection
