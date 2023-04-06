@@ -43,91 +43,6 @@ a {
     -ms-transition: all .3s;
     -o-transition: all .3s;
 }
-
-/* From uiverse.io by @satyamchaudharydev */
-/* removing default style of button */
-.form button {
-    border: none;
-    background: none;
-    color: #8b8ba7;
-}
-/* styling of whole input container */
-.form {
-    --timing: 0.3s;
-    --width-of-input: 300px;
-    --height-of-input: 40px;
-    --border-height: 2px;
-    --input-bg: #fff;
-    --border-color: ;
-    --border-radius: 30px;
-    --after-border-radius: 1px;
-    position: relative;
-    width: var(--width-of-input);
-    height: var(--height-of-input);
-    display: flex;
-    align-items: center;
-    padding-inline: 0.8em;
-    border-radius: var(--border-radius);
-    transition: border-radius 0.5s ease;
-    background: var(--input-bg,#fff);
-}
-/* styling of Input */
-.input {
-    font-size: 0.95rem;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    padding-inline:0.5em;
-    padding-block: 0.7em;
-    border: none;
-}
-/* styling of animated border */
-.form:before {
-    content: "";
-    position: absolute;
-    background: var(--border-color);
-    transform: scaleX(0);
-    transform-origin: center;
-    width: 100%;
-    height: var(--border-height);
-    left: 0;
-    bottom: 0;
-    border-radius: 1px;
-    transition: transform var(--timing) ease;
-}
-/* Hover on Input */
-.form:focus-within {
-    border-radius: var(--after-border-radius);
-}
-input:focus {
-    outline: none;
-}
-/* here is code of animated border */
-.form:focus-within:before {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-}
-/* styling of close button */
-/* == you can click the close button to remove text == */
-.reset {
-    border: none;
-    background: none;
-    opacity: 0;
-    visibility: hidden;
-}
-/* close button shown when typing */
-input:not(:placeholder-shown) ~ .reset {
-    opacity: 1;
-    visibility: visible;
-}
-/* sizing svg icons */
-.form svg {
-    width: 17px;
-    margin-top: 3px;
-}
 .navbar{
     width: 85%;
     margin: auto;
@@ -172,6 +87,60 @@ input:not(:placeholder-shown) ~ .reset {
 .navbar ul li:hover::after{
     width: 100%;
 }
+.navbar .nav-toggle{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+    color: white;
+}
+@media screen and (max-width: 900px) and (min-width: 480px){
+    .navbar{
+        padding: 0;
+    }
+    .navbar .logo{
+        position: absolute;
+        top: 40px;
+        width: 30px;
+    }
+    .navbar .nav-toggle{
+        display: block;
+    }
+    .navigation{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(101, 98, 98, 0.319);
+        backdrop-filter: blur(15px);
+        width: 100vh;
+        height: 97.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -ms-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+    }
+    .mobile-menu{
+        margin-left: 0;
+    }
+    ul.navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul.navigation li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
+/* mobile responsive */
+/* navbar */
+
 .caption{
     text-align: center;
     color: white;
@@ -205,59 +174,83 @@ input:not(:placeholder-shown) ~ .reset {
     padding-bottom: 1rem !important;
 }
 /* button shortut start */
-.container-shortcut{
-    display: inline-block;
+@media only screen and (max-width: 900px) and (min-width: 480px){
+    .container-shortcut {
+        display: inline-block;
+    }
 }
-.mt-9 {
-    margin-top: 25.96rem!important;
+.mt-9{
+    margin-top: 4.96rem !important;
 }
-.d-flex{
-    margin-top: 20px;
-    margin-left: 200%;
-    display: flex !important;
+.mt-9 .d-flex{
+    display: flex!important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 900px) and (min-width: 480px){
+    .mt-9 .d-flex {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width: 480px){
+    .group-shortcut {
+        margin-right: 1.5em;
+        margin-left: 1.5em;
+        margin-top: 400px !important;
+    }
+}
+:root {
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
 }
 .group-shortcut{
     margin-right: 1.5em;
     margin-left: 1.5em;
-    margin-top: 50px;
+    margin-top: 320px;
 }
-.btn-shortcut{
+.text-center{
+    text-align: center !important;
+}
+.btn-shortcut {
     height: 100px;
     width: 100px;
     line-height: 1.2;
     padding: 13px 7px;
     text-align: center;
 }
-.btn-shortcut{
+.btn-shortcut {
     position: relative;
     color: white;
+    /* background: white; */
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: #6868ac 1px 0 10px;
+    /* border: solid 1px #6868ac; */
+    border-radius: 120px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
     transition: all 0.25s ease-in-out;
-    border-radius: 120px;
-    -webkit-border-radius: 120px;
-    -moz-border-radius: 120px;
-    -ms-border-radius: 120px;
-    -o-border-radius: 120px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
 }
-.btn-shortcut i{
-    font-size: 23px;
+@media only screen and (max-width: 900px) and (min-width: 480px){
+    .btn-shortcut {
+        height: 100px;
+        width: 100px;
+        line-height: 1.2;
+        padding: 13px 7px;
+    }
 }
-.text-center{
-    text-align: center!important;
-}
-.btn-beat-radial:before{
-    content: '';
+.btn-beat-radial:before, .btn-beat-radial:after {
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -269,14 +262,55 @@ input:not(:placeholder-shown) ~ .reset {
     border-radius: 50%;
     opacity: 0;
     transition: all 0.25s ease-in-out;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
+}
+.w-100 {
+    width: 100%!important;
+}
+.d-block {
+    display: block!important;
+}
+@media only screen and (max-width: 900px) and (min-width: 480px){
+    .btn-shortcut i {
+        font-size: 23px;
+    }
+}
+.btn-shortcut i {
+    font-size: 23px;
+}
+.btn-shortcut i {
+    text-align: center;
+    text-shadow: none;
+}
+.fa-fw {
+    text-align: center;
+    width: 1.25em;
+}
+.fa, .fa-brands, .fa-duotone, .fa-light, .fa-regular, .fa-solid, .fa-thin, .fab, .fad, .fal, .far, .fas, .fat {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+.fa {
+    font-family: var(--fa-style-family, "Font Awesome 6 Free");
+    font-weight: var(--fa-style, 900);
+}
+.d-block{
+    display: block!important;
+}
+@media only screen and (max-width: 900px) and (min-width: 480px){
+    .btn-shortcut span {
+        font-size: 12px;
+    }
+}
+.btn-shortcut span {
+    font-size: 12px;
+}
+.btn-shortcut span {
+    font-weight: bold;
 }
 /* button shorcut end */
 
