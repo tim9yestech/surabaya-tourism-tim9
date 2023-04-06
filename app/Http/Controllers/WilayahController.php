@@ -13,20 +13,17 @@ class WilayahController extends Controller
         return view('admin.data-wilayah',compact('data','headtitle'));
     }
 
-    public function tambahwilayah(){
-        $headtitle = "Tambah Wilayah";
-        return view('admin.tambah-data-wilayah',compact('headtitle'));
-    }
-
-    public function insertwilayah(Request $request){
-        Wilayah::create($request->all());
-        return redirect()->route('tambah-wilayah')->with('success','Data berhasil ditambahkan');
-    }
-
-    public function editwilayah($id){
+    public function getByid($id)
+    {
         $data = Wilayah::find($id);
-        $headtitle = "Edit Data Wilayah";
-        return view('admin.edit-data-wilayah',compact('data','headtitle'));
+        return response()->json([
+            'data' => $data,
+        ]);
+    }
+
+    public function tambahwilayah(Request $request){
+        Wilayah::create($request->all());
+        return redirect()->route('data-wilayah')->with('success','Data berhasil ditambahkan');
     }
 
     public function updatewilayah(Request $request, $id){

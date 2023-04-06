@@ -17,6 +17,7 @@ class CreateDestinasisTable extends Migration
             $table->id();
             $table->string('nama');
             $table->string('alamat');
+            $table->integer('id_wilayah');
             $table->longText('deskripsi');
             $table->string('hari_operasional')->nullable();
             $table->string('jam_operasional')->nullable();

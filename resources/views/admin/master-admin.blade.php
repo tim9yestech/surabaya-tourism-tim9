@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="{!! asset('css/admin-panel.css') !!}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     {{-- DataTables --}}
-    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     {{-- Icon --}}
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    {{-- Ajax --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    {{-- Select Multiple --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,9 +37,9 @@
                     <span>{{ Auth::user()->role }}</span>
                 </div>
             </a>
-            <div class="bar-user admin-name">
+            {{-- <div class="bar-user admin-name">
                 <span>{{ Auth::user()->name }}</span>
-            </div>
+            </div> --}}
         </div>
         <ul class="side-menu top">
             <li class="{{ ($headtitle === "Dashboard") ? 'active' : '' }}">
@@ -61,10 +68,20 @@
                     <span>Data Destinasi Wisata</span>
                 </a>
             </li>
+            <li class="{{ ($headtitle === "Data Kategori Destinasi") ? 'active' : '' }}">
+                <a href="{{ route('data-kategoridestinasi') }}">
+                    <span style="padding-left: 40px;">Kategori Destinasi</span>
+                </a>
+            </li>
             <li class="{{ ($headtitle === "Data Produk UMKM") ? 'active' : '' }}">
                 <a href="{{ route('data-produk-umkm') }}">
                     <i class='bx bxs-store-alt'></i>
                     <span>Data Produk UMKM</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    <span style="padding-left: 40px;">Kategori Produk UMKM</span>
                 </a>
             </li>
             @can('role','admin')
@@ -76,30 +93,6 @@
             </li>
             @endcan
         </ul>
-        <div class="dividing-line"></div>
-        <ul class="side-menu top" style="margin-top: 29px;">
-            <li class="{{ ($headtitle === "Profil Admin") ? 'active' : '' }}">
-                <a href="{{ route('data-profil') }}">
-                    <i class='bx bxs-user-circle'></i>
-                    <span>Profil</span>
-                </a>
-            </li>
-            <li class="{{ ($headtitle === "Pengaturan") ? 'active' : '' }}">
-                <a href="{{ route('data-pengaturan') }}">
-                    <i class='bx bxs-cog'></i>
-                    <span>Pengaturan</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
-                    <i class='bx bxs-log-out-circle'></i>
-                    <span>Logout</span>
-                </a>
-                <form action="{{ route('admin.logout') }}" id="logout-form" method="post">
-                    @csrf
-                </form>
-            </li>
-        </ul>
     </section>
 
     {{-- Content --}}
@@ -107,7 +100,39 @@
 		{{-- Navbar --}}
 		<nav class="nav">
 			<i class='bx bx-menu'></i>
-            <span>Selamat Datang di Administrator Panel!</span>
+            <div class="d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="name">{{ Auth::user()->name }}</span>
+                <i class='bx bxs-user-circle'></i>
+                <ul class="dropdown-menu dropdown-menu-end" style="font-size: 14px;">
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <a href="{{ route('data-profil') }}" class="d-flex align-items-center">
+                                <i class='bx bxs-user-circle'></i>
+                                <span class="dropdown-span">Profil</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <a href="{{ route('data-pengaturan') }}" class="d-flex align-items-center">
+                                <i class='bx bxs-cog'></i>
+                                <span class="dropdown-span">Pengaturan</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout d-flex align-items-center">
+                                <i class='bx bxs-log-out-circle'></i>
+                                <span class="dropdown-span">Logout</span>
+                            </a>
+                            <form action="{{ route('admin.logout') }}" id="logout-form" method="post">
+                                @csrf
+                            </form>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         {{-- Main --}}
@@ -121,7 +146,11 @@
     {{-- Javascript local --}}
     <script src="{!! asset('js/adminpanel.js') !!}"></script>
     {{-- DataTables --}}
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    {{-- Ajax for Database --}}
+    @yield('js_konten')
 </body>
 </html>
 

@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Wilayah;
-use App\Models\Destinasi;
-use App\Models\Kategori_Destinasi;
+use App\Models\ProdukUMKM;
 use Illuminate\Http\Request;
 
-class DestinasiController extends Controller
+class ProdukUMKMController extends Controller
 {
-    // DESTINASI
+    // PRODUK UMKM
     public function index()
     {
         $data = Destinasi::all();
         $wilayah = Wilayah::all();
-        $kategori = Kategori_Destinasi::all();
         $headtitle = "Data Destinasi Wisata";
-        return view('admin.data-destinasi',compact('data','wilayah','kategori','headtitle'));
+        return view('admin.data-destinasi',compact('data','wilayah','headtitle'));
     }
 
     public function getByid($id)
@@ -28,8 +25,7 @@ class DestinasiController extends Controller
     }
 
     public function tambahdestinasi(Request $request){
-        $destinasi = Destinasi::create($request->all());
-        $destinasi->categories()->attach($request->input('id_kategori'));
+        Destinasi::create($request->all());
         return redirect()->route('data-destinasi')->with('success','Data berhasil ditambahkan');
     }
 

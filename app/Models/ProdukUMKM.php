@@ -13,13 +13,11 @@ class Destinasi extends Model
 
     protected $fillable = [
         'nama',
-        'alamat',
+        'legalitas',
+        'deskripi',
+        'alamat_outlet',
         'id_wilayah',
-        'deskripsi',
-        'hari_operasional',
-        'jam_operasional',
-        'link_reservasi',
-        'link_website',
+        'link_webproduk',
         'gambar'
     ];
 
@@ -32,7 +30,7 @@ class Destinasi extends Model
 
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Kategori_Destinasi::class,'pivot_destinasi_kategori', 'id_destinasi', 'id_kategori');
+        return $this->belongsToMany(Kategori_ProdukUMKM::class,'pivot_produk_kategori', 'id_produkumkm', 'id_kategori');
     }
 
 }

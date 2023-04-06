@@ -175,10 +175,6 @@ body {
     transition: width 0.3s ease;
 }
 
-#side-bar .side-menu li a.logout {
-    color: var(--yellow);
-}
-
 #side-bar .side-menu.top li a:hover {
     color: var(--black);
 }
@@ -244,12 +240,60 @@ body {
     border-radius: 6px;
 }
 
-#content nav span {
+#content nav .name {
     font-weight: 600;
     font-style: italic;
+    padding-right: 10px;
+}
+
+#content nav .dropdown-span {
+    padding-left: 10px;
+}
+
+#content nav li a.logout {
+    color: var(--red);
+}
+
+#content nav li a.logout:hover {
+    color: #af332e;
 }
 
 /* Main */
+/* Dashboard ~ count board */
+#content .card-board {
+    border: 0.5px solid #00000010;
+    color: #b3b3b3;
+}
+
+#content .card-board .card-body {
+    margin-left: 10px;
+}
+
+#content .card-board .count {
+    color: #535392;
+}
+
+/* Dashboard ~ chart */
+#content .chart h6 {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#content .chart canvas {
+    max-height: 250px;
+    padding-left: 30px;
+}
+
+#destinasiChart {
+    width: 600px;
+    padding-right: 30px;
+}
+
+#produkChart {
+    width: 310px;
+    margin-right: 50px;
+}
+
 #content main {
     width: 100%;
     padding: 36px 24px;
@@ -282,7 +326,8 @@ body {
 }
 
 #content main .form-create input,
-#content main .form-create select {
+#content main .form-create select,
+#content main .form-create textarea {
     font-size: 13px;
     margin-bottom: 20px;
 }
@@ -297,9 +342,21 @@ body {
     margin-right: (100% - 680px) / 2;
 }
 
-.scroll {
-    height: 350px;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll;
+.horizontal-scrollable {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#example_wrapper .row,
+#example_wrapper a {
+    font-size: 13px !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 4rem !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding-left: 0.2em !important;
+    padding-right: 0.2em !important;
 }
