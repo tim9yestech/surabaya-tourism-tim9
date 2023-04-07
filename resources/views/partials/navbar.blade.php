@@ -16,6 +16,9 @@
                         <li class="item {{ $headtitle === 'Produk UMKM - UMKM Surabaya' ? 'active' : '' }}">
                             <a href="/umkm">UMKM</a>
                         </li>
+                        <li class="item {{ $headtitle === 'Tim JWP-9' ? 'active' : '' }}">
+                            <a href="/tim">Tim Kami</a>
+                        </li>
                     </ul>
                 </div>
             </div>

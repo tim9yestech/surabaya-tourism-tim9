@@ -46,7 +46,7 @@
         <div class="mt-9 container-shortcut">
             <div class="d-flex">
                 <div class="text-center group-shortcut">
-                    <a href="https://tourism.surabaya.go.id/travel" class="btn-shortcut btn-beat-radial">
+                    <a href="/destinasi" class="btn-shortcut btn-beat-radial">
                         <div class="d-block w-100">
                             <i class="fa fa-fw fa-map-marked-alt"></i>
                         </div>
@@ -58,38 +58,13 @@
                     </a>
                 </div>
                 <div class="text-center group-shortcut">
-                    <a href="https://tourism.surabaya.go.id/travel/search/semua/cagar-budaya"
-                        class="btn-shortcut btn-beat-radial">
+                    <a href="/umkm" class="btn-shortcut btn-beat-radial">
                         <div class="d-block w-100">
-                            <i class="fa fa-fw fa-dungeon"></i>
+                            <i class="fa-sharp fa-solid fa-store fa-fw fa-lg"></i>
                         </div>
                         <div class="d-block w-100">
                             <span>
-                                Cagar Budaya
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="text-center group-shortcut">
-                    <a href="https://tourism.surabaya.go.id/agenda" class="btn-shortcut btn-beat-radial">
-                        <div class="d-block w-100">
-                            <i class="fa fa-fw fa-bullhorn"></i>
-                        </div>
-                        <div class="d-block w-100">
-                            <span>
-                                Event Surabaya
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="text-center group-shortcut">
-                    <a href="https://tourism.surabaya.go.id/map" class="btn-shortcut btn-beat-radial">
-                        <div class="d-block w-100">
-                            <i class="fa fa-fw fa-map"></i>
-                        </div>
-                        <div class="d-block w-100">
-                            <span>
-                                Peta Digital
+                                UMKM
                             </span>
                         </div>
                     </a>
