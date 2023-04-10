@@ -25,6 +25,9 @@ class DashboardController extends Controller
 
         $headtitle = "Dashboard";
         return view('admin.dashboard',compact('admin','countadmin','destinasi','countdestinasi','headtitle','json'));
+        return response()->json([
+            'data' => $data,
+        ]);
         
     }
 }
