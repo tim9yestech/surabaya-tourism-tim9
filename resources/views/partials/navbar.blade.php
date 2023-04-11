@@ -2,10 +2,13 @@
         <nav class="nav-menuzord">
             <div class="container clearfix">
                 <div id="menuzord" class="menuzord menuzord-responsive">
-                    <a href="https://tourism.surabaya.go.id" class="menuzord-text-brand">
+                    <a href="/" class="menuzord-text-brand">
                         <img src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png"
                             alt="Wisata Surabaya">
                     </a>
+                    <button class="hamburger" id="hamburger">
+                        <i class="fas fa-bars" style="color: #fff;"></i>
+                    </button>
                     <ul class="menuzord-menu menuzord-right menuzord-indentend scrollable" style="max-height: 400px;">
                         <li class="item {{ $headtitle === 'Wisata Surabaya' ? 'active' : '' }}">
                             <a href="/">Beranda</a>

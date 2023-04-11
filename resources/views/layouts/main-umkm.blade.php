@@ -8,6 +8,7 @@
     <title class="title">{{ $headtitle }}</title>
     <link rel="shortcut icon" href="{{ asset('assets/img/Logo-Surabaya.png') }}">
     <link rel="stylesheet" href="css/style.umkm.css">
+    <link rel="stylesheet" href="css/style.mobile.css">
     <link rel="stylesheet" href="css/bootstap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -78,5 +79,6 @@
 
 
 </body>
+<script src="js/toggler.js"></script>
 
 </html>

@@ -26,7 +26,9 @@
                 @yield('content-wrapper')
             </section>
             @include('partials.footer')
+            <script src="js/script.js"></script>
 
 </body>
+<script src="js/toggler.js"></script>
 
 </html>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('beranda', [
-        "title" => "Wisata Surabaya"
+        "headtitle" => "Wisata Surabaya"
     ]);
 });
 
@@ -28,6 +28,14 @@ Route::get('/destinasi', function(){
 Route::get('/umkm', function(){
     return view ('umkm',[
         "headtitle" => "Produk UMKM - UMKM Surabaya"
+    ]);
+});
+Route::get('/produk-umkm', function(){
+    return view ('produk-umkm');
+});
+Route::get('/tim', function(){
+    return view ('tim', [
+        "headtitle" => "Tim JWP-9"
     ]);
 });
 

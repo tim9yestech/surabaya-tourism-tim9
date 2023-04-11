@@ -105,7 +105,7 @@
                 </div>
                 <div class="item mb-4">
                     <div class="head-card border-0 shadow ">
-                        <a href="#">
+                        <a href="/produk-umkm">
                             <img src="assets/img/umkm/pakaian/john-anglo.jpg" alt="John Anglo" class="card-img-top">
                         </a>
                         <div class="card-body">

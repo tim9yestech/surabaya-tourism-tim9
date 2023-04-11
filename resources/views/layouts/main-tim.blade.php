@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/Logo-Surabaya.png') }}">
     <link rel="stylesheet" href="css/tim.css">
     <link rel="stylesheet" href="css/bootstap.min.css">
+    <link rel="stylesheet" href="css/style.mobile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -38,5 +39,6 @@
 
 
 </body>
+<script src="js/toggler.js"></script>
 
 </html>

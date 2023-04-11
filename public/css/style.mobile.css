@@ -1,0 +1,220 @@
+@media only screen and (max-width: 480px) {
+    .caption_overlay {
+        top: 50%;
+    }
+    .caption_overlay_title {
+        font-size: 30px;
+    }
+    .caption_overlay_subtitle {
+        font-size: 15px;
+    }
+    .section-segment img {
+        height: 45px;
+        width: 45px;
+    }
+    .section-segment h6 {
+        font-size: 10px;
+    }
+    .title-highlight, .title-highlight-dark {
+        font-size: 28px;
+    }
+    .img-icon {
+        width: 70px;
+        height: 70px;
+    }
+    .card-img .img-1 {
+        height: 300px;
+    }
+    .card-img .img-2 {
+        height: 300px;
+    }
+    .card-img .img-3 {
+        height: 300px;
+    }
+    .card-img .img-4 {
+        height: 300px;
+    }
+    .text-lg-right {
+        text-align: left;
+    }
+    .explore-event-list {
+        text-align: center;
+    }
+    .btn-front-container {
+        margin-right: 10px;
+    }
+    .btn-front {
+        width: 100px;
+        font-size: 10px;
+        padding: 2px 0;
+    }
+    .video-front {
+        height: 300px;
+    }
+    .slider-banner {
+        height: 100px!important;
+    }
+    .block-on-mobile {
+        display: block;
+    }
+    .bg-lg-img {
+        height: 100px;
+    }
+    .animated-title>div.text-bottom .content {
+        width: 300px;
+    }
+    @keyframes slidein {
+        0% { margin-left: -1000px; }
+        20% { margin-left: -1000px; }
+        35% { opacity: 1; margin-left: 0px; }
+        100% { margin-left: 0px; }
+    }
+
+    @keyframes reveal {
+        0% { opacity: 0; width: 0px; }
+        20% { opacity: 1; width: 0px; }
+        30% { width: 151px; }
+        80% { opacity: 1; }
+    }
+    .border-right {
+        border-right: 0px;
+    }
+    .img-event-detail {
+        height: 500px!important;
+    }
+    .animated-title>div.text-top {
+        height: 20%;
+    }
+    .animated-title>div.text-bottom {
+        height: 70%;
+    }
+    .search-box-expandable .search-input {
+        width: 250px;
+        margin: 0px 8px;
+    }
+    .search-box-expandable .search-btn {
+        float: right;
+        transform: translate(0, -100%);
+    }
+    .container-shortcut {
+        display: inline-block;
+    }
+    .btn-shortcut {
+        height: 70px;
+        width: 70px;
+        line-height: 0.5;
+        padding: 10px 6px;
+    }
+
+    .group-shortcut {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+    .btn-shortcut i {
+        font-size: 20px;
+    }
+
+    .btn-shortcut span {
+        font-size: 7px;
+    }
+
+    .nav-menuzord .menuzord .menuzord-text-brand {
+        padding-top: 12px;
+    }
+
+    .video_text_explore360 {
+        font-size: 10px;
+    }
+
+    .video_overlay {
+        position: absolute;
+        top: 40%;
+        bottom: 40%;
+        left: 20%;
+        right: 20%;
+        z-index: 1;
+    }
+
+    .pagination {
+        display: inline;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    .pagination>li {
+        display: inline;
+    }
+
+    .pagination .page-item .page-link {
+        display: inline;
+    }
+
+    .animated-title {
+        height: 150px;
+    }
+
+    .hero-overlay {
+        height: 50px;
+    }
+
+    .hero_overlay_title {
+        font-size: 30px;
+    }
+
+    .hero_overlay_subtitle {
+        font-size: 15px;
+    }
+
+    .section-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.hamburger{
+    background-color: #fff;
+    display: none;
+    border: 0;
+    color: #6868ac;
+    cursor: pointer;
+    font-size: 20px;
+}
+.hamburger:focus {
+    outline: none;
+}
+.hamburger{
+    background-color: #fff;
+    display: none;
+    border: 0;
+    color: #6868ac;
+    cursor: pointer;
+    font-size: 20px;
+}
+.hamburger:focus {
+    outline: none;
+}
+@media screen and (max-width: 767px){
+    .menuzord-menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .menuzord-menu.show{
+        display: flex;
+    }
+    .menuzord-menu > li {
+        margin: auto;
+    }
+    .hamburger{
+        display: block;
+        margin-top: 25px;
+        float: right;
+        background-color: #6868ac;
+        padding: 1px 8px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+}

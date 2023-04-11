@@ -8,6 +8,7 @@
     <title>Wisata Surabaya</title>
     <link rel="shortcut icon" href="{{ asset('assets/img/Logo-Surabaya.png') }}">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/bootstap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -24,17 +25,7 @@
             </video>
         </div>
         <header>
-            <nav class="navbar p-4">
-                <div class="logo"><img src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png"
-                        style="width: 100px" alt=""></div>
-                <ul class="navigation">
-                    <li class="item"><a href="/">BERANDA</a></li>
-                    <li class="item"><a href="/destinasi">DESTINASI</a></li>
-                    <li class="item"><a href="/umkm">UMKM</a></li>
-                    <li class="item"><a href="/tim">TIM KAMI</a></li>
-                </ul>
-                <div class="nav-toggle"><i class="fa-sharp fa-solid fa-bars fa-xl"></i></div>
-            </nav>
+            @include('partials.navbar')
         </header>
         <div class="caption">
             <h1 class="main-title mb-0">WISATA SURABAYA</h1>
@@ -309,6 +300,6 @@
     <!-- Footer Start -->
     @include('partials.footer')
 </body>
-<script src="js/beranda.js"></script>
+<script src="js/toggler.js"></script>
 
 </html>
