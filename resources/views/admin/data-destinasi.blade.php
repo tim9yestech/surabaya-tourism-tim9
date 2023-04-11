@@ -220,6 +220,7 @@
     </script>
     {{-- Select 2 --}}
     <script>
-        new MultiSelectTag('id_kategori','id_kategori_edit')
+        new MultiSelectTag('id_kategori')
+        new MultiSelectTag('id_kategori_edit')
     </script>
 @endsection

@@ -42,11 +42,7 @@ new Chart(chart1, {
     type: "bar",
     data: {
         labels: [
-            "Surabaya Pusat",
-            "Surabaya Utara",
-            "Surabaya Barat",
-            "Surabaya Selatan",
-            "Surabaya Timur",
+            
         ],
         datasets: [
             {
